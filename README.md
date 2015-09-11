@@ -10,10 +10,12 @@ Installation
 
 Einfach den Unterordner FETT_CfgLoadouts in den Missionsordner kopieren und folgende Zeilen in der description.ext hinzufügen:
 
+```
 class CfgFunctions {
 	#include "FETT_CfgLoadouts\CfgFunctions.hpp"
 };
 #include "FETT_CfgLoadouts\CfgLoadouts.hpp"
+```
 
 ------------------------------
 FETT_CfgLoadouts Einleitung
