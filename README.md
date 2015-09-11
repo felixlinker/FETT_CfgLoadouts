@@ -5,7 +5,18 @@
 FETT CfgLoadouts v0.2.2
 
 ------------------------------
-FETT Loadouts Einleitung
+Installation
+------------------------------
+
+Einfach den Unterordner FETT_CfgLoadouts in den Missionsordner kopieren und folgende Zeilen in der description.ext hinzufügen:
+
+class CfgFunctions {
+	#include "FETT_CfgLoadouts\CfgFunctions.hpp"
+};
+#include "FETT_CfgLoadouts\CfgLoadouts.hpp"
+
+------------------------------
+FETT_CfgLoadouts Einleitung
 ------------------------------
 
 Dieses configbasierte Loadoutsystem erlaubt es Missionsbauern schnell Loadouts zu erstellen und auf häufige Redundanzen zu verzichten.
