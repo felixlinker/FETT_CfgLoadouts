@@ -5,7 +5,7 @@ class BasicGear : GearClass {
     binocular_pool[] = {};
     map_pool[] = {"ItemMap"};
     gps_pool[] = {};
-    radio_pool[] = {};
+    radio_pool[] = {"tf_anprc152"};
     compass_pool[] = {"ItemCompass"};
     clock_pool[] = {"ItemWatch"};
 };
