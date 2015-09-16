@@ -2,7 +2,7 @@
 
 !!! Right now all explanations are only available in german. If you want a translation, contact me!!!
 
-FETT CfgLoadouts v0.2.31
+FETT CfgLoadouts v0.2.40
 
 ------------------------------
 Installation
