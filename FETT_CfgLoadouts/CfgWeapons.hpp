@@ -9,12 +9,20 @@ class RCO : WeaponClass {
 	scope_pool[] = {"optic_Hamr"};
 };
 
+class MRCO : WeaponClass {
+	scope_pool[] = {"optic_MRCO"};
+};
+
 class DMS : WeaponClass {
 	scope_pool[] = {"optic_DMS"};
 };
 
 class SOS : WeaponClass {
 	scope_pool[] = {"optic_SOS"};
+};
+
+class KHS : WeaponClass {
+	scope_pool[] = {"optic_KHS_blk"};
 };
 
 class Nightstalker : WeaponClass {
@@ -101,7 +109,7 @@ class ABR : DMS {
 };
 
 class Mk1 : ABR {
-	weapon_pool[] = {"srifle_DMR_03_F","srifle_DMR_03_multicam_F","srifle_DMR_03_khaki_F","srifle_DMR_03_tan_F"};
+	weapon_pool[] = {"srifle_DMR_03_F","srifle_DMR_03_multicam_F","srifle_DMR_03_tan_F"};
 	muzzleAttachment_pool[] = {"muzzle_snds_B"};
 	magazine = "20Rnd_762x51_Mag";
 };
@@ -120,10 +128,15 @@ class basicPistol : WeaponClass {
 	magazinesMax = 3;
 };
 
+class basicPistol_AAF : basicPistol {
+	weapon_pool[] = {"hgun_ACPC2_F"};
+	magazine = "9Rnd_45ACP_Mag";
+};
+
 class PCML : WeaponClass {
 	weapon_pool[] = {"launch_NLAW_F"};
 	magazine = "NLAW_F";
-	magazinesMax = 3;
+	magazinesMax = 0;
 };
 
 class TitanAT : WeaponClass {
@@ -133,10 +146,18 @@ class TitanAT : WeaponClass {
 	optional[] = {"Titan_AP"};
 };
 
+class I_TitanAT : TitanAT {
+	weapon_pool[] = {"launch_I_Titan_short_F"};
+};
+
 class TitanAA : WeaponClass {
 	weapon_pool[] = {"launch_B_Titan_F"};
 	magazine = "Titan_AA";
 	magazinesMax = 2;
+};
+
+class I_TitanAA : TitanAA {
+	weapon_pool[] = {"launch_I_Titan_F"};
 };
 
 class Lynx : LRPS {
@@ -151,4 +172,67 @@ class VectorSMG : Holosight_SMG {
 	weapon_pool[] = {"SMG_01_Holo_F"};
 	magazine = "30Rnd_45ACP_Mag_SMG_01";
 	magazinesMax = 7;
+};
+
+class PDW2000 : Holosight_SMG {
+	weapon_pool[] = {"hgun_PDW2000_Holo_F"};
+	magazine = "30Rnd_9x21_Mag";
+	magazinesMax = 4;
+};
+
+class F2000 : ACO {
+	weapon_pool[] = {"arifle_Mk20_F"};
+	barrelAttachment_pool[] = {"acc_pointer_IR"};
+	magazine = "30Rnd_556x45_Stanag";
+	magazineTracer = "30Rnd_556x45_Stanag_Tracer_Yellow";
+	magazinesMax = 15;
+};
+
+class F2000C : F2000 {
+	weapon_pool[] = {"arifle_Mk20C_F"};
+};
+
+class F2000GL : F2000 {
+	weapon_pool[] = {"arifle_Mk20_GL_F"};
+	optional[] = {
+		{"1Rnd_HE_Grenade_shell",12},
+		{"1Rnd_SmokeRed_Grenade_shell",4},
+		{"1Rnd_SmokeGreen_Grenade_shell",4}
+	};
+};
+
+class F2000GL_JTAC : F2000GL {
+	magazinesMax = 7;
+	optional[] = {
+		{"1Rnd_HE_Grenade_shell",8},
+		{"1Rnd_SmokeRed_Grenade_shell",8},
+		{"1Rnd_SmokeGreen_Grenade_shell",8},
+		{"1Rnd_SmokeBlue_Grenade_shell",4},
+		{"1Rnd_SmokeYellow_Grenade_shell",4},
+		"Laserbatteries"
+	};
+};
+
+class MK200 : MRCO {
+	weapon_pool[] = {"LMG_Mk200_F"};
+	barrelAttachment_pool[] = {"acc_pointer_IR"};
+	weaponRestingAttachment_pool[] = {"bipod_03_F_blk"};
+	magazine = "200Rnd_65x39_cased_Box";
+	magazineTracer = "200Rnd_65x39_cased_Box_Tracer";
+	magazinesMax = 6;
+	magazinesTracerEvery = 2;
+};
+
+class Mk14 : KHS {
+	weapon_pool[] = {"srifle_DMR_06_olive_F"};
+	weaponRestingAttachment_pool[] = {"bipod_03_F_blk"};
+	magazine = "20Rnd_762x51_Mag";
+	magazinesMax = 12;
+};
+
+class Cyrus : KHS {
+	weapon_pool[] = {"srifle_DMR_05_blk_F","srifle_DMR_05_tan_f"};
+	weaponRestingAttachment_pool[] = {"bipod_03_F_blk"};
+	magazine = "10Rnd_93x64_DMR_05_Mag";
+	magazinesMax = 20;
 };
