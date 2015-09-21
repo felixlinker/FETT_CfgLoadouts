@@ -582,7 +582,9 @@ class CfgLoadouts {
 			class handGun : basicPistol {};
 		};
 		class Gear : B_LogisticsGear {};
-		class Items : PilotMedicMaterial {};
+		class Items : PilotMedicMaterial {
+			optional[] = {"CL_LogiTracker"};
+		};
 	};
 
 	class I_Logistician : SoldierClass {
@@ -592,7 +594,9 @@ class CfgLoadouts {
 			class handGun : basicPistol_AAF {};
 		};
 		class Gear : I_LogisticsGear {};
-		class Items : PilotMedicMaterial {};
+		class Items : PilotMedicMaterial {
+			optional[] = {"CL_LogiTracker"};
+		};
 	};
 
 	class B_LogisticianTL : B_Logistician {
