@@ -204,6 +204,7 @@ class CfgLoadouts {
 			class primaryWeapon : MX {};
 		};
 		class Items : CombatMedicMaterial {};
+		onApplyLoadout = "_this setVariable ['ace_medical_medicClass',1,true];";
 	};
 
 	class I_CombatMedic : I_Rifleman {
@@ -211,6 +212,7 @@ class CfgLoadouts {
 			class primaryWeapon : F2000 {};
 		};
 		class Items : CombatMedicMaterial {};
+		onApplyLoadout = "_this setVariable ['ace_medical_medicClass',1,true];";
 	};
 
 	class B_Medic : SoldierClass {
@@ -223,6 +225,7 @@ class CfgLoadouts {
 		};
 		class Gear : B_NormalSoldierGPSGear {};
 		class Items : MedicMaterial {};
+		onApplyLoadout = "_this setVariable ['ace_medical_medicClass',1,true];";
 	};
 
 	class I_Medic : SoldierClass {
@@ -235,6 +238,7 @@ class CfgLoadouts {
 		};
 		class Gear : I_NormalSoldierGPSGear {};
 		class Items : MedicMaterial {};
+		onApplyLoadout = "_this setVariable ['ace_medical_medicClass',1,true];";
 	};
 
 	class B_FTL : B_Grenadier {
@@ -557,6 +561,7 @@ class CfgLoadouts {
 			class handGun {};
 		};
 		class Gear : B_HeliCrewGear {};
+		onApplyLoadout = "_this setVariable ['ace_medical_medicClass',1,true];";
 	};
 
 	class I_ParaMedic : I_CombatMedic {
@@ -565,6 +570,7 @@ class CfgLoadouts {
 			class handGun {};
 		};
 		class Gear : I_HeliCrewGear {};
+		onApplyLoadout = "_this setVariable ['ace_medical_medicClass',1,true];";
 	};
 
 	class B_Logistician : SoldierClass {

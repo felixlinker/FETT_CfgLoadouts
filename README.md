@@ -2,7 +2,7 @@
 
 !!! Right now all explanations are only available in german. If you want a translation, contact me!!!
 
-FETT CfgLoadouts v0.2.40
+FETT CfgLoadouts v0.2.50
 
 ------------------------------
 Installation
@@ -88,3 +88,10 @@ class ChildClass : ParentClass {
 };
 
 Bei der Vererbung passiert folgendes: Die ChildClass "erbt" alle Inhalte der ParentClass. Sie werden einfach reinkopiert. Und ihr könnt sie überschreiben, indem ihr sie einfach neu schreibt. So könnt ihr komplexe Beziehungen aufbauen und somit Redundanzen vermeiden und den Code sicherer gestalten.
+
+------------------------------
+Changelog
+------------------------------
+
+- v0.2.50:
+onApplyLoadout zu Loadouts hinzugefügt. Code, der hier steht, wird ausgeführt, wenn einem Objekt ein Loadout hinzugefügt wird. _this ist das Objekt.

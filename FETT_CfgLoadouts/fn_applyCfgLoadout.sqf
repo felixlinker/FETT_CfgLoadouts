@@ -234,3 +234,6 @@ for "_i" from 0 to (_biggestArrayCount - 1) do {
 };
 
 _obj selectWeapon (primaryWeapon _obj);
+
+// Run onApplyLoadout code
+_obj call compile getText (_loadout >> "onApplyLoadout");

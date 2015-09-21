@@ -44,4 +44,5 @@ class SoldierClass {
         class handGun : WeaponClass {};
     };
     class Items : ItemsClass {};
+    onApplyLoadout = "";
 };
