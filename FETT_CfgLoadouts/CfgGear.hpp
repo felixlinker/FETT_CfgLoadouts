@@ -126,7 +126,7 @@ class B_CrewGear : B_NormalSoldierGPSGear {
 
 class I_CrewGear : I_NormalSoldierGPSGear {
 	helmet_pool[] = {"H_HelmetCrew_I"};
-}
+};
 
 class B_PilotGear : B_NormalSoldierGPSGear {
 	helmet_pool[] = {"H_PilotHelmetFighter_B"};
@@ -150,7 +150,7 @@ class B_HeliCrewGear : B_NormalSoldierGPSGear {
 
 class I_HeliCrewGear : I_NormalSoldierGPSGear {
 	helmet_pool[] = {"H_CrewHelmetHeli_I"};
-}
+};
 
 class B_LogisticsGear : B_NormalSoldierGPSGear {
 	helmet_pool[] = {"H_HelmetB_black"};

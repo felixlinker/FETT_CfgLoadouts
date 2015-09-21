@@ -609,5 +609,5 @@ class CfgLoadouts {
 		class Container : Container {
 			backpack_pool[] = {"tf_anprc155"};
 		};
-	}
+	};
 };

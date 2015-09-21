@@ -62,7 +62,7 @@ class B_ChestRigBigContainer : B_ChestRigContainer {
 
 class I_LightContainer : I_SmallContainer {
 	vest_pool[] = {"V_PlateCarrierIA1_dgtl"};
-}
+};
 
 class I_ChestRigContainer : I_Uniforms {
 	vest_pool[] = {
