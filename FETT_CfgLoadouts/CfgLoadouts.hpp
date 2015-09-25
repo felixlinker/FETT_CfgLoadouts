@@ -395,6 +395,14 @@ class CfgLoadouts {
 		};
 	};
 
+	class B_ReconMedic : B_Recon {
+		class Container : Container {
+			backpack_pool[] = {"B_FieldPack_oli"};
+		};
+		class Gear : CombatMedicMaterial {};
+		onApplyLoadout = "_this setVariable ['ace_medical_medicClass',1,true];";
+	};
+
 	class B_JTAC : B_ReconJTAC {
 		class Container : B_LightContainer {};
 		class Weapons : Weapons {
