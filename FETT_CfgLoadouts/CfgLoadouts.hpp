@@ -169,7 +169,7 @@ class CfgLoadouts {
 		class Weapons : Weapons {
 			class primaryWeapon : MXGL {};
 		};
-		class Gear : I_NormalSoldierBinocGear {};
+		class Gear : B_NormalSoldierBinocGear {};
 	};
 
 	class I_Grenadier : I_AutomaticRifleman {
