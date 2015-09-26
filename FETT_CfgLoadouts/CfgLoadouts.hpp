@@ -399,7 +399,7 @@ class CfgLoadouts {
 		class Container : Container {
 			backpack_pool[] = {"B_FieldPack_oli"};
 		};
-		class Gear : CombatMedicMaterial {};
+		class Items : CombatMedicMaterial {};
 		onApplyLoadout = "_this setVariable ['ace_medical_medicClass',1,true];";
 	};
 
