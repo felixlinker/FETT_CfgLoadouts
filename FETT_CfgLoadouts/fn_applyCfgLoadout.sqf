@@ -1,15 +1,17 @@
 #define SELECTRANDOM(ARR) (ARR select (floor random count ARR))
 
-private ["_class","_obj"];
-_class = _this select 0;
-_obj = if (count _this > 1) then {_this select 1} else {player};
+params [["_class",""],["_faction",""],["_obj",player]];
 
-if (typeName _class != typeName "" || typeName _obj != typeName objNull) exitWith {
-    diag_log "W Loadout error: wrong params given";
+if (_class == "") then {
+    _class = typeOf _obj;
+};
+
+if (_faction == "") then {
+    _faction = getText (configFile >> "CfgVehicles" >> typeOf _obj >> "faction");
 };
 
 private "_loadout";
-_loadout = missionConfigFile >> "CfgLoadouts" >> _class;
+_loadout = missionConfigFile >> "CfgLoadouts" >> _faction >> _class;
 if (!isClass _loadout) exitWith {
     diag_log format ["W Loadout error: class %1 not found",_class];
 };

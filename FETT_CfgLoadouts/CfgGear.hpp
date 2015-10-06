@@ -1,18 +1,13 @@
 class B_BasicGear : GearClass {
 	helmet_pool[] = {};
-    goggle_pool[] = {};
-    nightvision_pool[] = {"NVGoggles"};
-    binocular_pool[] = {};
-    map_pool[] = {"ItemMap"};
-    gps_pool[] = {};
-    radio_pool[] = {"tf_anprc152"};
-    compass_pool[] = {"ItemCompass"};
-    clock_pool[] = {"ItemWatch"};
-};
-
-class I_BasicGear : B_BasicGear {
-	nightvision_pool[] = {"NVGoggles_INDEP"};
-	radio_pool[] = {"tf_anprc148jem"};
+	goggle_pool[] = {};
+	nightvision_pool[] = {"NVGoggles"};
+	binocular_pool[] = {};
+	map_pool[] = {"ItemMap"};
+	gps_pool[] = {};
+	radio_pool[] = {"tf_anprc152"};
+	compass_pool[] = {"ItemCompass"};
+	clock_pool[] = {"ItemWatch"};
 };
 
 class B_NormalSoldierGear : B_BasicGear {
@@ -33,25 +28,12 @@ class B_NormalSoldierGear : B_BasicGear {
 	};
 };
 
-class I_NormalSoldierGear : I_BasicGear {
-	helmet_pool[] = {"H_HelmetIA"};
-
-};
-
 class B_NormalSoldierBinocGear : B_NormalSoldierGear {
-	binocular_pool[] = {"Binocular"};
-};
-
-class I_NormalSoldierBinocGear : I_NormalSoldierGear {
 	binocular_pool[] = {"Binocular"};
 };
 
 class B_NormalSoldierGPSGear : B_NormalSoldierBinocGear {
 	gps_pool[] = {"b_itemGPS_FT"};
-};
-
-class I_NormalSoldierGPSGear : I_NormalSoldierBinocGear {
-	gps_pool[] = {"i_itemGPS_FT"};
 };
 
 class B_AdvancedSoldierGear : B_NormalSoldierGPSGear {
@@ -64,15 +46,7 @@ class B_AdvancedSoldierGear : B_NormalSoldierGPSGear {
 	binocular_pool[] = {"Rangefinder"};
 };
 
-class I_AdvancedSoldierGear : I_NormalSoldierGPSGear {
-	binocular_pool[] = {"Rangefinder"};
-};
-
 class B_AdvancedSoldierGear_noHelmet : B_AdvancedSoldierGear {
-	helmet_pool[] = {};
-};
-
-class I_AdvancedSoldierGear_noHelmet : I_AdvancedSoldierGear {
 	helmet_pool[] = {};
 };
 
@@ -82,10 +56,6 @@ class B_OfficerGear : B_AdvancedSoldierGear {
 		"H_Beret_Colonel",
 		"H_MilCap_mcamo"
 	};
-};
-
-class I_OfficerGear : I_AdvancedSoldierGear {
-	helmet_pool[] = {"H_MilCap_dgtl","H_Beret_blk"};
 };
 
 class B_SOFSoldierGear : B_AdvancedSoldierGear {
@@ -107,6 +77,55 @@ class B_SOFSoldierGear : B_AdvancedSoldierGear {
 	};
 };
 
+class B_CrewGear : B_NormalSoldierGPSGear {
+	helmet_pool[] = {"H_HelmetCrew_0"};
+};
+
+class B_PilotGear : B_NormalSoldierGPSGear {
+	helmet_pool[] = {"H_PilotHelmetFighter_B"};
+};
+
+class B_HeliPilotGear : B_NormalSoldierGPSGear {
+	helmet_pool[] = {"H_PilotHelmetHeli_B"};
+};
+
+class B_HeliCrewGear : B_NormalSoldierGPSGear {
+	helmet_pool[] = {"H_CrewHelmetHeli_B"};
+};
+
+class B_LogisticsGear : B_NormalSoldierGPSGear {
+	helmet_pool[] = {"H_HelmetB_black"};
+};
+
+class I_BasicGear : B_BasicGear {
+	nightvision_pool[] = {"NVGoggles_INDEP"};
+	radio_pool[] = {"tf_anprc148jem"};
+};
+
+class I_NormalSoldierGear : I_BasicGear {
+	helmet_pool[] = {"H_HelmetIA"};
+};
+
+class I_NormalSoldierBinocGear : I_NormalSoldierGear {
+	binocular_pool[] = {"Binocular"};
+};
+
+class I_NormalSoldierGPSGear : I_NormalSoldierBinocGear {
+	gps_pool[] = {"i_itemGPS_FT"};
+};
+
+class I_AdvancedSoldierGear : I_NormalSoldierGPSGear {
+	binocular_pool[] = {"Rangefinder"};
+};
+
+class I_AdvancedSoldierGear_noHelmet : I_AdvancedSoldierGear {
+	helmet_pool[] = {};
+};
+
+class I_OfficerGear : I_AdvancedSoldierGear {
+	helmet_pool[] = {"H_MilCap_dgtl","H_Beret_blk"};
+};
+
 class I_SOFSoldierGear : I_AdvancedSoldierGear {
 	helmet_pool[] = {
 		"H_Bandanna_khk_hs",
@@ -120,42 +139,86 @@ class I_SOFSoldierGear : I_AdvancedSoldierGear {
 	};
 };
 
-class B_CrewGear : B_NormalSoldierGPSGear {
-	helmet_pool[] = {"H_HelmetCrew_0"};
-};
-
 class I_CrewGear : I_NormalSoldierGPSGear {
 	helmet_pool[] = {"H_HelmetCrew_I"};
-};
-
-class B_PilotGear : B_NormalSoldierGPSGear {
-	helmet_pool[] = {"H_PilotHelmetFighter_B"};
 };
 
 class I_PilotGear : I_NormalSoldierGPSGear {
 	helmet_pool[] = {"H_PilotHelmetFighter_I"};
 };
 
-class B_HeliPilotGear : B_NormalSoldierGPSGear {
-	helmet_pool[] = {"H_PilotHelmetHeli_B"};
-};
-
 class I_HeliPilotGear : I_NormalSoldierGPSGear {
 	helmet_pool[] = {"H_PilotHelmetFighter_I"};
-};
-
-class B_HeliCrewGear : B_NormalSoldierGPSGear {
-	helmet_pool[] = {"H_CrewHelmetHeli_B"};
 };
 
 class I_HeliCrewGear : I_NormalSoldierGPSGear {
 	helmet_pool[] = {"H_CrewHelmetHeli_I"};
 };
 
-class B_LogisticsGear : B_NormalSoldierGPSGear {
-	helmet_pool[] = {"H_HelmetB_black"};
-};
-
 class I_LogisticsGear : I_NormalSoldierGPSGear {
 	helmet_pool[] = {"H_MilCap_dgtl"};
+};
+
+class O_BasicGear : B_BasicGear {
+	nightvision_pool[] = {"NVGoggles_OPFOR"};
+	radio_pool[] = {"tf_fadak"};
+};
+
+class O_NormalSoldierGear : O_BasicGear {
+	helmet_pool[] = {"H_HelmetO_ocamo"};
+};
+
+class O_NormalSoldierBinocGear : O_NormalSoldierGear {
+	binocular_pool[] = {"Binocular"};
+};
+
+class O_NormalSoldierGPSGear : O_NormalSoldierBinocGear {
+	gps_pool[] = {"o_itemGPS_FT"};
+};
+
+class O_AdvancedSoldierGear : O_NormalSoldierGPSGear {
+	helmet_pool[] = {"H_HelmetSpecO_ocamo"};
+	binocular_pool[] = {"Rangefinder"};
+};
+
+class O_AdvancedSoldierGear_noHelmet : O_AdvancedSoldierGear {
+	helmet_pool[] = {};
+};
+
+class O_OfficerGear : O_AdvancedSoldierGear {
+	helmet_pool[] = {"H_MilCap_ocamo","H_Beret_blk"};
+};
+
+class O_SOFSoldierGear : O_AdvancedSoldierGear {
+	helmet_pool[] = {
+		"H_Bandanna_gry",
+		"H_Bandanna_sand",
+		"H_Watchcap_cbr",
+		"H_Watchcap_khk",
+		"H_Booniehat_tan",
+		"H_Booniehat_khk_hs",
+		"H_Cap_brn_SPECOPS",
+		"H_MilCap_ocamo",
+		"H_ShemagOpen_tan"
+	};
+};
+
+class O_CrewGear : O_NormalSoldierGPSGear {
+	helmet_pool[] = {"H_HelmetCrew_O"};
+};
+
+class O_PilotGear : O_NormalSoldierGPSGear {
+	helmet_pool[] = {"H_PilotHelmetFighter_O"};
+};
+
+class O_HeliPilotGear : O_NormalSoldierGPSGear {
+	helmet_pool[] = {"H_PilotHelmetHeli_O"};
+};
+
+class O_HeliCrewGear : O_NormalSoldierGPSGear {
+	helmet_pool[] = {"H_CrewHelmetHeli_O"};
+};
+
+class O_LogisticsGear : O_NormalSoldierGPSGear {
+	helmet_pool[] = {"H_MilCap_ocamo"};
 };

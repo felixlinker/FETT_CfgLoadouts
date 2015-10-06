@@ -5,8 +5,16 @@ class ACO : WeaponClass {
 	scope_pool[] = {"optic_Aco"};
 };
 
+class ACO_green : WeaponClass {
+	scope_pool[] = {"optic_ACO_grn"};
+};
+
 class RCO : WeaponClass {
 	scope_pool[] = {"optic_Hamr"};
+};
+
+class ARCO : WeaponClass {
+	scope_pool[] = {"optic_Arco"};
 };
 
 class MRCO : WeaponClass {
@@ -150,6 +158,10 @@ class I_TitanAT : TitanAT {
 	weapon_pool[] = {"launch_I_Titan_short_F"};
 };
 
+class O_TitanAT : TitanAT {
+	weapon_pool[] = {"launch_O_Titan_short_F"};
+};
+
 class TitanAA : WeaponClass {
 	weapon_pool[] = {"launch_B_Titan_F"};
 	magazine = "Titan_AA";
@@ -160,12 +172,22 @@ class I_TitanAA : TitanAA {
 	weapon_pool[] = {"launch_I_Titan_F"};
 };
 
+class O_TitanAA : TitanAA {
+	weapon_pool[] = {"launch_O_Titan_F"};
+};
+
 class Lynx : LRPS {
-	weapon_pool[] = {"srifle_GM6_F"};
+	weapon_pool[] = {"srifle_GM6_F","srifle_GM6_camo_F"};
 	magazine = "5Rnd_127x108_Mag";
 	magazineTracer = "5Rnd_127x108_APDS_Mag";
-	magazinesMax = 8;
+	magazinesMax = 12;
 	magazinesTracerEvery = 4;
+};
+
+class M320 : Lynx {
+	weapon_pool[] = {"srifle_LRR_F","srifle_LRR_camo_F"};
+	magazine = "16Rnd_9x21_Mag";
+	magazinesMax = 12;
 };
 
 class VectorSMG : Holosight_SMG {
@@ -213,7 +235,7 @@ class F2000GL_JTAC : F2000GL {
 	};
 };
 
-class MK200 : MRCO {
+class MK200 : ACO {
 	weapon_pool[] = {"LMG_Mk200_F"};
 	barrelAttachment_pool[] = {"acc_pointer_IR"};
 	weaponRestingAttachment_pool[] = {"bipod_03_F_blk"};
@@ -235,4 +257,97 @@ class Cyrus : KHS {
 	weaponRestingAttachment_pool[] = {"bipod_03_F_blk"};
 	magazine = "10Rnd_93x64_DMR_05_Mag";
 	magazinesMax = 20;
+};
+
+class Katiba : ACO_green {
+	weapon_pool[] = {"arifle_Katiba_F"};
+	barrelAttachment_pool[] = {"acc_pointer_IR"};
+	magazine = "30Rnd_65x39_caseless_green";
+	magazineTracer = "30Rnd_65x39_caseless_green_mag_Tracer";
+	magazinesMax = 15;
+};
+
+class KatibaC : Holosight {
+	weapon_pool[] = {"arifle_Katiba_C_F"};
+	barrelAttachment_pool[] = {"acc_pointer_IR"};
+	magazine = "30Rnd_65x39_caseless_green";
+	magazineTracer = "30Rnd_65x39_caseless_green_mag_Tracer";
+	magazinesMax = 12;
+};
+
+class KatibaGL : Katiba {
+	weapon_pool[] = {"arifle_Katiba_GL_F"};
+	magazinesMax = 9;
+	optional[] = {
+		{"1Rnd_HE_Grenade_shell",12},
+		{"1Rnd_SmokeRed_Grenade_shell",4},
+		{"1Rnd_SmokeGreen_Grenade_shell",4}
+	};
+};
+
+class KatibaGL_JTAC : KatibaGL {
+	magazinesMax = 7;
+	optional[] = {
+		{"1Rnd_HE_Grenade_shell",8},
+		{"1Rnd_SmokeRed_Grenade_shell",8},
+		{"1Rnd_SmokeGreen_Grenade_shell",8},
+		{"1Rnd_SmokeBlue_Grenade_shell",4},
+		{"1Rnd_SmokeYellow_Grenade_shell",4},
+		"Laserbatteries"
+	};
+};
+
+class Zafir : ACO_green {
+	weapon_pool[] = {"LMG_Zafir_F"};
+	barrelAttachment_pool[] = {"acc_pointer_IR"};
+	magazine = "150Rnd_762x54_Box";
+	magazineTracer = "150Rnd_762x54_Box_Tracer";
+	magazinesMax = 5;
+	magazinesTracerEvery = 3;
+};
+
+class Navid : ARCO {
+	weapon_pool[] = {"MMG_01_hex_F","MMG_01_tan_F"};
+	barrelAttachment_pool[] = {"acc_pointer_IR"};
+	weaponRestingAttachment_pool[] = {"bipod_02_F_tan"};
+	magazine = "150Rnd_93x64_Mag";
+	magazinesMax = 5;
+};
+
+class Cyrus_csat : Cyrus {
+	weapon_pool[] = {"srifle_DMR_05_hex_F","srifle_DMR_05_tan_f"};
+};
+
+class Rahim : ARCO {
+	weapon_pool[] = {"rhs_weap_fgm148"};
+	barrelAttachment_pool[] = {"acc_pointer_IR"};
+	weaponRestingAttachment_pool[] = {"bipod_02_F_hex"};
+	magazine = "10Rnd_762x54_Mag";
+	magazinesMax = 15;
+};
+
+class RPG42 : WeaponClass {
+	weapon_pool[] = {"launch_RPG32_F"};
+	magazine = "RPG32_F";
+	magazineTracer = "RPG32_HE_F";
+	magazinesMax = 4;
+	magazinesTracerEvery = 2;
+};
+
+class basicPistol_csat : WeaponClass {
+	weapon_pool[] = {"hgun_Rook40_F"};
+	magazine = "16Rnd_9x21_Mag";
+	magazinesMax = 3;
+};
+
+class Mk1_csat : Mk1 {
+	weapon_pool[] = {"srifle_DMR_03_F","srifle_DMR_03_khaki_F","srifle_DMR_03_tan_F"};
+};
+
+class Sting : ACO_green {
+	weapon_pool[] = {"SMG_02_F"};
+	magazine = "30Rnd_9x21_Mag";
+	magazineTracer = "30Rnd_9x21_Green_Mag";
+	magazinesMax = 7;
+	magazinesTracerEvery = 3;
 };
