@@ -2,7 +2,7 @@
 
 !!! Right now all explanations are only available in german. If you want a translation, contact me!!!
 
-FETT CfgLoadouts v0.2.51
+FETT CfgLoadouts v0.2.60
 
 ------------------------------
 Installation
@@ -50,15 +50,17 @@ Aufbau eines Loadouts & Verwendung
 Um ein Loadout zu erstellen, muss an nur alle Variablen entsprechend setzen.
 Jeder Configeintrag, der in der CfgDefines.hpp gelistet ist, muss in jedem Loadout enthalten sein. Um sicherzugehen, dass jeder Eintrag enthalten ist, sollte immer mit Vererbungen gearbeitet werden.
 
-Alle Loadouts, die verwendet werden sollen, müssen in der description.ext in der class CfgLoadouts {}; enthalten sein.
+Alle Loadouts, die verwendet werden sollen, müssen in der description.ext in der class CfgLoadouts {}; und als Unterklasse in der entsprechenden Fraktion enthalten sein.
+Der Name der Fraktion wird durch den Namen der Unterklasse in der CfgLoadouts definiert.
 
 ------------------------------
 Loadout anwenden
 ------------------------------
 
 Um ein Loadout anzuwenden, muss man lediglich folgenden Funktionsaufruf verwenden:
-["NAME DES LOADOUTS",OBJEKT] call FETT_fnc_applyCfgLoadout;
-Dabei stellt "NAME DES LOADOUTS" einen Eintrag in der CfgLoadouts dar.
+["NAME DES LOADOUTS","NAME DER FRATKION",OBJEKT] call FETT_fnc_applyCfgLoadout;
+Dabei stellt "NAME DES LOADOUTS" einen Eintrag in der CfgLoadouts dar. Wird er ausgelassen, wird der Classname des Objekts verwendet, dem das Loadout zugeteilt wird.
+"NAME DER FRAKTION" die entsprechende Fraktion. Wird er ausgelassen, wird die Fraktion in den CfgVehicles des Objekts verwendet, dem das Loadout zugeteilt wird.
 OBJEKT ist ein optionaler Parameter, der das Objekt darstellt, dem das Loadout hnizugefügt werden soll. Wird dieser Parameter weggelassen, wird player verwendet.
 
 ------------------------------
