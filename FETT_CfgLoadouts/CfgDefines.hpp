@@ -6,7 +6,7 @@ class ContainerClass {
 
 class GearClass {
 	helmet_pool[] = {};
-	google_pool[] = {};
+	goggle_pool[] = {};
 	nightvision_pool[] = {};
 	binocular_pool[] = {};
 	map_pool[] = {};
