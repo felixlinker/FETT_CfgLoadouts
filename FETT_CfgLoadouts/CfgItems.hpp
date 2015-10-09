@@ -110,7 +110,8 @@ class CombatMedicMaterial : BasicGrenades {
 		{"ACE_epinephrine",8},
 		{"ACE_salineIV_500",6},
 		{"ACE_tourniquet",3},
-		"ACE_surgicalKit"
+		{"ACE_surgicalKit",3},
+		"w_ace_defibrillator"
 	};
 };
 
@@ -126,7 +127,8 @@ class MedicMaterial : SmallGrenades {
 		{"ACE_epinephrine",12},
 		{"ACE_salineIV_500",12},
 		"ACE_personalAidKit",
-		"ACE_surgicalKit"
+		{"ACE_surgicalKit",8},
+		"w_ace_defibrillator"
 	};
 };
 
