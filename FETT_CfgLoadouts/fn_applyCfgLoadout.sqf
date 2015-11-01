@@ -6,6 +6,7 @@ if (_class == "") then {
     _class = typeOf _obj;
 };
 
+_a = "a";
 if (_faction == "") then {
     _faction = getText (configFile >> "CfgVehicles" >> typeOf _obj >> "faction");
 };

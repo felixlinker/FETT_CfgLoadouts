@@ -1,4 +1,8 @@
-class BasicGrenades : ItemsClass {
+class earplugs : ItemsClass {
+	other[] = {"ACE_EarPlugs"};
+};
+
+class BasicGrenades : earplugs {
 	grenades[] = {
 		{"HandGrenade",2},
 		{"MiniGrenade",2},
@@ -8,7 +12,7 @@ class BasicGrenades : ItemsClass {
 	};
 };
 
-class SmallGrenades : ItemsClass {
+class SmallGrenades : earplugs {
 	grenades[] = {
 		{"HandGrenade",2},
 		{"SmokeShellRed",1},
@@ -17,7 +21,7 @@ class SmallGrenades : ItemsClass {
 	};
 };
 
-class SpecialGrenades : ItemsClass {
+class SpecialGrenades : earplugs {
 	grenades[] = {
 		{"HandGrenade",2},
 		{"MiniGrenade",2},
@@ -30,7 +34,7 @@ class SpecialGrenades : ItemsClass {
 	};
 };
 
-class SpecialGrenadesSmall : ItemsClass {
+class SpecialGrenadesSmall : earplugs {
 	grenades[] = {
 		{"SmokeShellBlue",1},
 		{"SmokeShellGreen",1},

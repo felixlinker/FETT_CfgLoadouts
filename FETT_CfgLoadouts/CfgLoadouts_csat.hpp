@@ -9,7 +9,7 @@ class Rifleman : SoldierClass {
 		class handGun : basicPistol_csat {};
 	};
 	class Items : BasicMedicMaterial {
-		other[] = {{"150Rnd_762x54_Box",3}};
+		other[] = {"ACE_EarPlugs",{"150Rnd_762x54_Box",3}};
 	};
 };
 
@@ -58,20 +58,20 @@ class AssistantMachineGunner : Rifleman {
 		};
 	};
 	class Items : BasicMedicMaterial {
-		other[] = {{"150Rnd_93x64_Mag",5}};
+		other[] = {"ACE_EarPlugs",{"150Rnd_93x64_Mag",5}};
 	};
 	class Gear : O_NormalSoldierBinocGear {};
 };
 
 class AssistantAT : AssistantMachineGunner {
 	class Items : Items {
-		other[] = {{"Titan_AT",2},"Titan_AP"};
+		other[] = {"ACE_EarPlugs",{"Titan_AT",2},"Titan_AP"};
 	};
 };
 
 class AssistantAA : AssistantAT {
 	class Items : Items {
-		other[] = {{"Titan_AA",2}};
+		other[] = {"ACE_EarPlugs",{"Titan_AA",2}};
 	};
 };
 
