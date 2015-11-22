@@ -1,6 +1,6 @@
 class Rifleman : SoldierClass {
 	class Container : I_MediumContainer {};
-	class Gear : I_NormalSoldierGear {};
+	class Gear : I_BasicGear {};
 	class Weapons : Weapons {
 		class primaryWeapon : F2000 {
 			scope_pool[] = {"optic_MRCO"};
@@ -9,7 +9,7 @@ class Rifleman : SoldierClass {
 		class handGun : basicPistol_AAF {};
 	};
 	class Items : BasicMedicMaterial {
-		other[] = {"ACE_EarPlugs",{"200Rnd_65x39_cased_Box",2}};
+		other[] = {{"200Rnd_65x39_cased_Box",2}};
 	};
 };
 class RiflemanAT : Rifleman {
@@ -55,18 +55,18 @@ class AssistantMachineGunner : Rifleman {
 		};
 	};
 	class Items : BasicMedicMaterial {
-		other[] = {"ACE_EarPlugs",{"130Rnd_338_Mag",5}};
+		other[] = {{"130Rnd_338_Mag",5}};
 	};
 	class Gear : I_NormalSoldierBinocGear {};
 };
 class AssistantAT : AssistantMachineGunner {
 	class Items : Items {
-		other[] = {"ACE_EarPlugs",{"Titan_AT",2},"Titan_AP"};
+		other[] = {{"Titan_AT",2},"Titan_AP"};
 	};
 };
 class AssistantAA : AssistantAT {
 	class Items : Items {
-		other[] = {"ACE_EarPlugs",{"Titan_AA",2}};
+		other[] = {{"Titan_AA",2}};
 	};
 };
 class Grenadier : AutomaticRifleman {
@@ -118,19 +118,17 @@ class Lead : SoldierClass {
 		class primaryWeapon : F2000C {};
 		class handGun : basicPistol_AAF {};
 	};
-	class Gear : I_OfficerGear {};
+	class Gear : I_AdvancedSoldierGear {};
 	class Items : SmallMedicMaterial {};
 };
 class MIO : Lead {
 	class Gear : Gear {
-		gps_pool[] = {"i_itemLAPTOP_FT"};
+		gps_pool[] = {"i_EasyTrack_Tablet"};
 	};
 };
 class Recon : SoldierClass {
-	class Container : I_LightContainer {
-		backpack_pool[] = {"B_FieldPack_oli"};
-	};
-	class Gear : I_SOFSoldierGear {
+	class Container : I_SOFContainer {};
+	class Gear : I_AdvancedSoldierGear {
 		gps_pool[] = {};
 	};
 	class Items : SOFMedicMaterial {};
@@ -143,7 +141,7 @@ class ReconTL : Recon {
 	class Container : Container {
 		backpack_pool[] = {"tf_anprc155"};
 	};
-	class Gear : I_SOFSoldierGear {};
+	class Gear : I_AdvancedSoldierGear {};
 };
 class ReconDM : Recon {
 	class Weapons : Weapons {
@@ -169,7 +167,7 @@ class ReconJTAC : Recon {
 			muzzleAttachment_pool[] = {"muzzle_snds_M"};
 		};
 	};
-	class Gear : I_SOFSoldierGear {
+	class Gear : I_AdvancedSoldierGear {
 		binocular_pool[] = {"Laserdesignator"};
 	};
 };
@@ -192,7 +190,7 @@ class Sniper : SoldierClass {
 		class primaryWeapon : Lynx {};
 		class handGun : basicPistol_AAF {};
 	};
-	class Gear : I_AdvancedSoldierGear_noHelmet {};
+	class Gear : I_AdvancedSoldierGear {};
 	class Items : SOFMedicMaterial {};
 };
 class Spotter : Sniper {
@@ -206,7 +204,7 @@ class Crew : SoldierClass {
 		class primaryWeapon : F2000C {};
 		class handGun : basicPistol_AAF {};
 	};
-	class Gear : I_CrewGear {};
+	class Gear : I_NormalSoldierGPSGear {};
 	class Items : BasicMedicMaterial {};
 };
 class Commander : Crew {
@@ -219,7 +217,7 @@ class Pilot : SoldierClass {
 	class Weapons : Weapons {
 		class primaryWeapon : PDW2000 {};
 	};
-	class Gear : I_PilotGear {};
+	class Gear : I_NormalSoldierGPSGear {};
 	class Items : PilotMedicMaterial {};
 };
 class PilotRadio : Pilot {
@@ -232,39 +230,46 @@ class HeliPilot : SoldierClass {
 	class Weapons : Weapons {
 		class primaryWeapon : PDW2000 {};
 	};
-	class Gear : I_HeliPilotGear {};
+	class Gear : I_NormalSoldierGPSGear {};
 	class Items : PilotMedicMaterial {};
 };
 class HeliCrew : HeliPilot {
-	class Container : I_LightContainer {
+	class Container : I_HeliCrewGear {
 		backpack_pool[] = {};
 	};
 	class Weapons : Weapons {
 		class primaryWeapon : F2000C {};
 	};
-	class Gear : I_HeliCrewGear {};
+	class Gear : I_NormalSoldierGPSGear {};
 };
 class ParaMedic : CombatMedic {
+	class Container : Container {
+		helmet_pool[] = {"H_CrewHelmetHeli_I"};
+	};
 	class Weapons : Weapons {
 		class pimaryWeapon : F2000C {};
 		class handGun {};
 	};
-	class Gear : I_HeliCrewGear {};
+	class Gear : I_NormalSoldierGPSGear {};
 	onApplyLoadout = "_this setVariable ['ace_medical_medicClass',1,true];";
 };
 class Logistician : SoldierClass {
-	class Container : I_ChestRigContainer {};
+	class Container : I_ChestRigContainer {
+		helmet_pool[] = {"H_MilCap_dgtl"};
+	};
 	class Weapons : Weapons {
 		class primaryWeapon : F2000C {};
 		class handGun : basicPistol_AAF {};
 	};
-	class Gear : I_LogisticsGear {};
+	class Gear : I_NormalSoldierGPSGear {};
 	class Items : PilotMedicMaterial {
 		optional[] = {"CL_LogiTracker"};
 	};
+	onApplyLoadout = "_this setVariable ['ACE_IsEngineer',1,true];";
 };
 class LogisticianTL : Logistician {
 	class Container : Container {
 		backpack_pool[] = {"tf_anprc155"};
 	};
+	onApplyLoadout = "_this setVariable ['ACE_IsEngineer',1,true];";
 };

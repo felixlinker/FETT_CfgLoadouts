@@ -1,11 +1,11 @@
 class ContainerClass {
+	helmet_pool[] = {};
 	uniform_pool[] = {};
 	vest_pool[] = {};
 	backpack_pool[] = {};
 };
 
 class GearClass {
-	helmet_pool[] = {};
 	goggle_pool[] = {};
 	nightvision_pool[] = {};
 	binocular_pool[] = {};
@@ -14,6 +14,7 @@ class GearClass {
 	radio_pool[] = {};
 	compass_pool[] = {};
 	clock_pool[] = {};
+	special[] = {};
 };
 
 class WeaponClass {

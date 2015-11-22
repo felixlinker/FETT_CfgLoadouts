@@ -1,8 +1,4 @@
-class earplugs : ItemsClass {
-	other[] = {"ACE_EarPlugs"};
-};
-
-class BasicGrenades : earplugs {
+class BasicGrenades : ItemsClass {
 	grenades[] = {
 		{"HandGrenade",2},
 		{"MiniGrenade",2},
@@ -12,7 +8,7 @@ class BasicGrenades : earplugs {
 	};
 };
 
-class SmallGrenades : earplugs {
+class SmallGrenades : ItemsClass {
 	grenades[] = {
 		{"HandGrenade",2},
 		{"SmokeShellRed",1},
@@ -21,7 +17,7 @@ class SmallGrenades : earplugs {
 	};
 };
 
-class SpecialGrenades : earplugs {
+class SpecialGrenades : ItemsClass {
 	grenades[] = {
 		{"HandGrenade",2},
 		{"MiniGrenade",2},
@@ -34,7 +30,7 @@ class SpecialGrenades : earplugs {
 	};
 };
 
-class SpecialGrenadesSmall : earplugs {
+class SpecialGrenadesSmall : ItemsClass {
 	grenades[] = {
 		{"SmokeShellBlue",1},
 		{"SmokeShellGreen",1},
@@ -70,90 +66,22 @@ class SpecialGrenadesSmall : earplugs {
 	"ACE_surgicalKit"
 	"ACE_bodyBag"
 
-	class MedicMaterials {
-		#include "Medical\CfgMedicalBasejumper.hpp"
-		#include "Medical\CfgMedicalCasual.hpp"
-		#include "Medical\CfgMedicalMilSim.hpp"
-		#include "Medical\CfgMedicalQuickNDirty.hpp"
-		#include "Medical\CfgMedicalRunningMan.hpp"
-	};
-
 */
 
-class BasicMedicMaterial : BasicGrenades {
-	medicMaterial[] = {
-		{"ACE_packingBandage",4},
-		{"ACE_quikclot",4},
-		{"ACE_elasticBandage",3},
-		{"ACE_fieldDressing",3},
-		{"ACE_morphine",1},
-		{"ACE_epinephrine",1},
-		{"ACE_tourniquet",1}
-	};
-};
+// Basejumper
+#ifdef BASEJUMPER
+	#include "Medical\CfgMedicalBasejumper.hpp"
+#endif
+#ifdef BASEJUMPER_LAND
+	#include "Medical\CfgMedicalBasejumper.hpp"
+#endif
 
-class SmallMedicMaterial : SmallGrenades {
-	medicMaterial[] = {
-		{"ACE_packingBandage",2},
-		{"ACE_quikclot",2},
-		"ACE_elasticBandage",
-		"ACE_fieldDressing",
-		"ACE_morphine",
-		"ACE_epinephrine"
-	};
-};
+// MilSim
+#ifdef MILSIM
+	#include "Medical\CfgMedicalMilSim.hpp"
+#endif
 
-class CombatMedicMaterial : BasicGrenades {
-	medicMaterial[] = {
-		{"ACE_fieldDressing",12},
-		{"ACE_packingBandage",12},
-		{"ACE_quikclot",12},
-		{"ACE_elasticBandage",12},
-		{"ACE_morphine",8},
-		{"ACE_atropine",8},
-		{"ACE_epinephrine",8},
-		{"ACE_salineIV_500",6},
-		{"ACE_tourniquet",3},
-		{"ACE_surgicalKit",3},
-		"w_ace_defibrillator"
-	};
-};
-
-class MedicMaterial : SmallGrenades {
-	medicMaterial[] = {
-		{"ACE_quikclot",24},
-		{"ACE_packingBandage",24},
-		{"ACE_fieldDressing",24},
-		{"ACE_elasticBandage",24},
-		{"ACE_tourniquet",2},
-		{"ACE_morphine",12},
-		{"ACE_atropine",12},
-		{"ACE_epinephrine",12},
-		{"ACE_salineIV_500",12},
-		"ACE_personalAidKit",
-		{"ACE_surgicalKit",8},
-		"w_ace_defibrillator"
-	};
-};
-
-class SOFMedicMaterial : SpecialGrenades {
-	medicMaterial[] = {
-		{"ACE_packingBandage",4},
-		{"ACE_quikclot",4},
-		{"ACE_elasticBandage",2},
-		{"ACE_fieldDressing",2},
-		{"ACE_morphine",2},
-		{"ACE_epinephrine",2}
-	};
-};
-
-class PilotMedicMaterial : SpecialGrenadesSmall {
-	medicMaterial[] = {
-		{"ACE_packingBandage",4},
-		{"ACE_quikclot",4},
-		{"ACE_elasticBandage",2},
-		{"ACE_fieldDressing",2},
-		{"ACE_morphine",2},
-		{"ACE_epinephrine",2}
-	};
-};
+// Running man
+#ifdef RUNNINGMAN
+	#include "Medical\CfgMedicalRunningMan.hpp"
+#endif

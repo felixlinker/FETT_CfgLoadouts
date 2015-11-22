@@ -56,13 +56,35 @@ if (count _container != 0) then {
     _addedContainer set [2,_backpack];
 };
 
+// Add helmet
+_container = getArray (_loadout >> "Container" >> "helmet_pool");
+if (count _container != 0) then {
+    private "_helmet";
+    _helmet = SELECTRANDOM(_container);
+    _obj addHeadgear _helmet;
+};
+
 // Add gear
 {
+    private "_gear";
     _gear = getArray (_loadout >> "Gear" >> _x);
     if (count _gear != 0) then {
         _obj addWeapon SELECTRANDOM(_gear);
     };
-} forEach ["helmet_pool","goggle_pool","nightvision_pool","binocular_pool","map_pool","gps_pool","radio_pool","compass_pool","clock_pool"];
+} forEach ["goggle_pool","nightvision_pool","binocular_pool","map_pool","gps_pool","radio_pool","compass_pool","clock_pool"];
+
+private "_gear";
+_gear = getArray (_loadout >> "Gear" >> "special");
+{
+    if (typeName _x == typeName []) then {
+        _x params ["_item","_count"];
+        for "_i" from 1 to _count do {
+            _obj addItem _item;
+        };
+    } else {
+        _obj addItem _x;
+    };
+} forEach _gear;
 
 // Add weapons and get magazines
 private ["_magazinesPrimary","_magazinesSecondary","_magazinesHandgun","_magazinesAdditionally"];
@@ -134,8 +156,9 @@ _magazinesAdditionally = [];
 
         {
             if (typeName _x == typeName []) then {
-                for "_i" from 1 to (_x select 1) do {
-                    _magazinesAdditionally pushBack (_x select 0);
+                _x params ["_magazine","_count"];
+                for "_i" from 1 to _count do {
+                    _magazinesAdditionally pushBack _magazine;
                 };
             }
             else {
@@ -158,8 +181,9 @@ _combined = [_medicMaterial,_grenades,_other];
         private "_transformed";
         _transformed = [];
         if (typeName _x == typeName []) then {
-            for "_i" from 1 to (_x select 1) do {
-                _transformed pushBack (_x select 0);
+            _x params ["_magazine","_count"];
+            for "_i" from 1 to _count do {
+                _transformed pushBack _magazine;
             };
         }
         else {
