@@ -2,7 +2,7 @@ class B_BasicGear : GearClass {
 	goggle_pool[] = {};
 	nightvision_pool[] = {"NVGoggles"};
 	binocular_pool[] = {};
-	map_pool[] = {};
+	map_pool[] = {"itemMap"};
 	gps_pool[] = {};
 	radio_pool[] = {"tf_anprc152"};
 	compass_pool[] = {"ItemCompass"};
