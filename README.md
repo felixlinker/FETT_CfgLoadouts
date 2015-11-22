@@ -97,7 +97,7 @@ Changelog
 
 - v0.2.50:
 onApplyLoadout zu Loadouts hinzugefuegt. Code, der hier steht, wird ausgefuehrt, wenn einem Objekt ein Loadout hinzugefuegt wird. _this ist das Objekt.
-- v0.2.60
+- v0.2.70
 Die Helme sind jetzt Teil der Container und nicht mehr des Gears
 Das Gear enthält einen neuen Wert "special", alle Dinge dort drin werden per addItem hinzugefügt
 Die Medicsysteme werden aus dem Template übernommen und das Medic Loadout kann im Ordner "Medical" eingestellt werden

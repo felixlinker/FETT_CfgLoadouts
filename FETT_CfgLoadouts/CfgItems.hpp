@@ -85,3 +85,24 @@ class SpecialGrenadesSmall : ItemsClass {
 #ifdef RUNNINGMAN
 	#include "Medical\CfgMedicalRunningMan.hpp"
 #endif
+
+// Rücksetzungpunkt, sollte kein Medicsystem definiert sein
+#ifndef MILSIM
+	#ifndef BASEJUMPER
+		#ifndef BASEJUMPER_LAND
+			#ifndef RUNNINGMAN
+				class BasicMedicMaterial : BasicGrenades {};
+
+				class SmallMedicMaterial : SmallGrenades {};
+
+				class CombatMedicMaterial : BasicGrenades {};
+
+				class MedicMaterial : SmallGrenades {};
+
+				class SOFMedicMaterial : SpecialGrenades {};
+
+				class PilotMedicMaterial : SpecialGrenadesSmall {};
+			#endif
+		#endif
+	#endif
+#endif
