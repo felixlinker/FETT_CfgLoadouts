@@ -177,11 +177,7 @@ class ReconMedic : Recon {
 	onApplyLoadout = "_this setVariable ['ace_medical_medicClass',1,true];";
 };
 class JTAC : ReconJTAC {
-	class Container : B_LightContainer {};
-	class Weapons : Weapons {
-		class primaryWeapon : MXGL_JTAC {};
-	};
-	class Gear : Gear {
+	class Container : B_RadioRuckContainer {
 		helmet_pool[] = {
 			"H_HelmetB_light",
 			"H_HelmetB_light_desert",
@@ -190,6 +186,10 @@ class JTAC : ReconJTAC {
 			"H_HelmetB_light_snakeskin"
 		};
 	};
+	class Weapons : Weapons {
+		class primaryWeapon : MXGL_JTAC {};
+	};
+	class Gear : Gear {};
 };
 class Sniper : SoldierClass {
 	class Container : B_GhillieContainer {};
