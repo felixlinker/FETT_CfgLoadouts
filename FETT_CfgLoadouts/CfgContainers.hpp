@@ -95,7 +95,10 @@ class B_RadioRuckContainer : B_LightContainer {
 		"H_HelmetSpecB_sand",
 		"H_HelmetSpecB_snakeskin"
 	};
-	backpack_pool[] = {"tf_rt1523g_big"};
+	backpack_pool[] = {
+		"B_Kitbag_mcamo",
+		"B_Kitbag_rgr"
+	};
 };
 
 class B_RadioRuckContainerLead : B_RadioRuckContainer {
@@ -225,7 +228,7 @@ class I_HeavySoldierContainer : I_SmallContainer {
 };
 
 class I_RadioRuckContainer : I_LightContainer {
-	backpack_pool[] = {"tf_anprc155"};
+	backpack_pool[] = {"B_Kitbag_rgr"};
 };
 
 class I_GhillieContainer : ContainerClass {
@@ -303,7 +306,10 @@ class O_LightContainer : O_SmallContainer {
 
 class O_RadioRuckContainer : O_GrenContainer {
 	helmet_pool[] = {"H_HelmetSpecO_ocamo"};
-	backpack_pool[] = {"tf_mr3000"};
+	backpack_pool[] = {
+		"B_FieldPack_ocamo",
+		"B_FieldPack_cbr"
+	};
 };
 
 class O_SOFContainer : O_MediumContainer {

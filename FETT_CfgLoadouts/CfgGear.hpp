@@ -4,7 +4,7 @@ class B_BasicGear : GearClass {
 	binocular_pool[] = {};
 	map_pool[] = {"itemMap"};
 	gps_pool[] = {};
-	radio_pool[] = {"tf_anprc152"};
+	radios[] = {"ACRE_PRC343"};
 	compass_pool[] = {"ItemCompass"};
 	clock_pool[] = {"ItemWatch"};
 	special[] = {"ACE_microDAGR"};
@@ -24,7 +24,6 @@ class B_AdvancedSoldierGear : B_NormalSoldierGPSGear {
 
 class I_BasicGear : B_BasicGear {
 	nightvision_pool[] = {"NVGoggles_INDEP"};
-	radio_pool[] = {"tf_anprc148jem"};
 };
 
 class I_NormalSoldierBinocGear : I_BasicGear {
@@ -41,7 +40,6 @@ class I_AdvancedSoldierGear : I_NormalSoldierGPSGear {
 
 class O_BasicGear : B_BasicGear {
 	nightvision_pool[] = {"NVGoggles_OPFOR"};
-	radio_pool[] = {"tf_fadak"};
 };
 
 class O_NormalSoldierBinocGear : O_BasicGear {

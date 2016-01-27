@@ -71,7 +71,12 @@ if (count _container != 0) then {
     if (count _gear != 0) then {
         _obj addWeapon SELECTRANDOM(_gear);
     };
-} forEach ["goggle_pool","nightvision_pool","binocular_pool","map_pool","gps_pool","radio_pool","compass_pool","clock_pool"];
+} forEach ["goggle_pool","nightvision_pool","binocular_pool","map_pool","gps_pool","compass_pool","clock_pool"];
+
+// Add radios
+{
+    _obj addWeapon _x;
+} forEach (getArray (_loadout >> "Gear" >> "radios"));
 
 private "_gear";
 _gear = getArray (_loadout >> "Gear" >> "special");

@@ -120,7 +120,9 @@ class FTL : Grenadier {
 
 class SQL : Grenadier {
 	class Container : O_RadioRuckContainer {};
-	class Gear : O_AdvancedSoldierGear {};
+	class Gear : O_AdvancedSoldierGear {
+		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
+	};
 	class Items : SmallMedicMaterial {};
 };
 
@@ -130,12 +132,15 @@ class Lead : SoldierClass {
 		class primaryWeapon : KatibaC {};
 		class handGun : basicPistol_csat {};
 	};
-	class Gear : O_AdvancedSoldierGear {};
+	class Gear : O_AdvancedSoldierGear {
+		radios[] = {"ACRE_PRC343","ACRE_PRC148","ACRE_PRC152"};
+	};
 	class Items : SmallMedicMaterial {};
 };
 
 class MIO : Lead {
 	class Gear : Gear {
+		radios[] = {"ACRE_PRC343","ACRE_PRC148","ACRE_PRC152"};
 		gps_pool[] = {"o_EasyTrack_Tablet"};
 	};
 };
@@ -153,10 +158,10 @@ class Recon : SoldierClass {
 };
 
 class ReconTL : Recon {
-	class Container : Container {
-		backpack_pool[] = {"tf_mr3000"};
+	class Container : Container {};
+	class Gear : O_AdvancedSoldierGear {
+		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
 	};
-	class Gear : O_AdvancedSoldierGear {};
 };
 
 class ReconDM : Recon {
@@ -175,15 +180,14 @@ class ReconUAV : Recon {
 };
 
 class ReconJTAC : Recon {
-	class Container : Container {
-		backpack_pool[] = {"tf_mr3000"};
-	};
+	class Container : Container {};
 	class Weapons : Weapons {
 		class primaryWeapon : KatibaGL_JTAC {
 			muzzleAttachment_pool[] = {"muzzle_snds_H"};
 		};
 	};
 	class Gear : O_AdvancedSoldierGear {
+		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
 		binocular_pool[] = {"Laserdesignator"};
 	};
 };
@@ -209,7 +213,9 @@ class Sniper : SoldierClass {
 		class primaryWeapon : Lynx {};
 		class handGun : basicPistol_csat {};
 	};
-	class Gear : O_AdvancedSoldierGear {};
+	class Gear : O_AdvancedSoldierGear {
+		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
+	};
 	class Items : SOFMedicMaterial {};
 };
 
@@ -230,8 +236,8 @@ class Crew : SoldierClass {
 };
 
 class Commander : Crew {
-	class Container : Container {
-		backpack_pool[] = {"tf_mr3000"};
+	class Gear : Gear {
+		radios[] = {"ACRE_PRC343","ACRE_PRC148","ACRE_PRC152"};
 	};
 };
 
@@ -242,22 +248,22 @@ class Pilot : SoldierClass {
 			magazinesMax = 3;
 		};
 	};
-	class Gear : O_NormalSoldierGPSGear {};
+	class Gear : O_NormalSoldierGPSGear {
+		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
+	};
 	class Items : PilotMedicMaterial {};
 };
 
-class PilotRadio : Pilot {
-	class Container : Container {
-		backpack_pool[] = {"tf_mr3000"};
-	};
-};
+class PilotRadio : Pilot {};
 
 class HeliPilot : SoldierClass {
 	class Container : O_HeliPilotContainer {};
 	class Weapons : Weapons {
 		class primaryWeapon : Sting {};
 	};
-	class Gear : O_NormalSoldierGPSGear {};
+	class Gear : O_NormalSoldierGPSGear {
+		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
+	};
 	class Items : PilotMedicMaterial {};
 };
 
@@ -268,7 +274,9 @@ class HeliCrew : HeliPilot {
 	class Weapons : Weapons {
 		class primaryWeapon : KatibaC {};
 	};
-	class Gear : O_NormalSoldierGPSGear {};
+	class Gear : O_NormalSoldierGPSGear {
+		radios[] = {"ACRE_PRC343"};
+	};
 };
 
 class ParaMedic : CombatMedic {
@@ -301,8 +309,8 @@ class Logistician : SoldierClass {
 };
 
 class LogisticianTL : Logistician {
-	class Container : Container {
-		backpack_pool[] = {"tf_mr3000"};
+	class Gear : Gear {
+		radios[] = {"ACRE_PRC343","ACRE_PRC148","ACRE_PRC152"};
 	};
 	onApplyLoadout = "_this setVariable ['ACE_IsEngineer',1,true];";
 };
