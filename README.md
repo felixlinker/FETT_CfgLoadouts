@@ -2,7 +2,7 @@
 
 !!! Right now all explanations are only available in german. If you want a translation, contact me!!!
 
-FETT CfgLoadouts v0.2.71
+FETT CfgLoadouts v0.3.0
 
 ------------------------------
 Installation
@@ -101,3 +101,6 @@ onApplyLoadout zu Loadouts hinzugefuegt. Code, der hier steht, wird ausgefuehrt,
 Die Helme sind jetzt Teil der Container und nicht mehr des Gears
 Das Gear enthält einen neuen Wert "special", alle Dinge dort drin werden per addItem hinzugefügt
 Die Medicsysteme werden aus dem Template übernommen und das Medic Loadout kann im Ordner "Medical" eingestellt werden
+- v0.3.0
+Umstellung auf ACRE
+Delayed execution for loadouts
