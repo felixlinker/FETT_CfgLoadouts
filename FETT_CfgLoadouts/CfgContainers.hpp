@@ -148,11 +148,10 @@ class B_JetPilotContainer : ContainerClass {
 	backpack_pool[] = {"ACE_NonSteerableParachute"};
 };
 
-class B_HeliPilotContainer : ContainerClass {
+class B_HeliPilotContainer : B_SmallContainer {
 	helmet_pool[] = {"H_PilotHelmetHeli_B"};
 	uniform_pool[] = {"U_B_HeliPilotCoveralls"};
 	vest_pool[] = {"V_TacVest_blk"};
-	backpack_pool[] = {"tf_rt1523g_black"};
 };
 
 class B_HeliCrewContainer : B_HeliPilotContainer {
@@ -248,11 +247,10 @@ class I_JetPilotContainer : ContainerClass {
 	backpack_pool[] = {"ACE_NonSteerableParachute"};
 };
 
-class I_HeliPilotContainer : ContainerClass {
+class I_HeliPilotContainer : I_SmallContainer {
 	helmet_pool[] = {"H_PilotHelmetFighter_I"};
 	uniform_pool[] = {"U_I_HeliPilotCoveralls"};
 	vest_pool[] = {"V_TacVest_blk"};
-	backpack_pool[] = {"tf_anprc155_coyote"};
 };
 
 class I_HeliCrewGear : I_HeliPilotContainer {
@@ -260,10 +258,9 @@ class I_HeliCrewGear : I_HeliPilotContainer {
 	backpack_pool[] = {};
 };
 
-class I_OfficerContainer : I_LightContainer {
+class I_OfficerContainer : I_SmallContainer {
 	helmet_pool[] = {"H_MilCap_dgtl","H_Beret_blk"};
 	uniform_pool[] = {"U_I_OfficerUniform"};
-	backpack_pool[] = {"tf_anprc155"};
 };
 
 class O_Uniforms : ContainerClass {
@@ -331,11 +328,10 @@ class O_ChestRigBigContainer : O_BigContainer {
 	vest_pool[] = {"V_Chestrig_rgr"};
 };
 
-class O_LeaderContainer : ContainerClass {
+class O_LeaderContainer : O_SmallContainer {
 	helmet_pool[] = {"H_MilCap_ocamo","H_Beret_blk"};
 	uniform_pool[] = {"U_O_OfficerUniform_ocamo"};
 	vest_pool[] = {"V_BandollierB_cbr"};
-	backpack_pool[] = {"tf_mr3000"};
 };
 
 class O_CrewContainer : O_Uniforms {

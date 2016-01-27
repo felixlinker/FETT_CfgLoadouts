@@ -143,9 +143,7 @@ class Recon : SoldierClass {
 	};
 };
 class ReconTL : Recon {
-	class Container : Container {
-		backpack_pool[] = {"tf_anprc155"};
-	};
+	class Container : Container {};
 	class Gear : I_AdvancedSoldierGear {
 		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
 	};
@@ -166,9 +164,7 @@ class ReconUAV : Recon {
 	};
 };
 class ReconJTAC : Recon {
-	class Container : Container {
-		backpack_pool[] = {"tf_anprc155"};
-	};
+	class Container : Container {};
 	class Weapons : Weapons {
 		class primary : F2000GL_JTAC {
 			muzzleAttachment_pool[] = {"muzzle_snds_M"};
