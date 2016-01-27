@@ -3,5 +3,6 @@ class W_Loadouts_Config {
 	class loadouts {
 		file = "Fett_CfgLoadouts";
 		class applyCfgLoadout {};
+		class giveLoadout {};
 	};
 };
