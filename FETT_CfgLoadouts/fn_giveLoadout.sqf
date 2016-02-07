@@ -51,7 +51,7 @@ if (count _container != 0) then {
 
 // Add radios
 {
-	_obj addWeapon _x;
+	_obj addItem _x;
 } forEach (getArray (_loadout >> "Gear" >> "radios"));
 
 private "_gear";
