@@ -1,6 +1,6 @@
 #define SELECTRANDOM(ARR) (ARR select (floor random count ARR))
 
-params ["_loadout",["_faction","",[""]],["_obj",player,[objNull]]];
+params ["_loadout",["_obj",player,[objNull]]];
 
 // Add container
 private ["_container","_addedContainer"];

@@ -46,5 +46,4 @@ class SoldierClass {
 	};
 	class Items : ItemsClass {};
 	onApplyLoadout = "";
-	faction = "";
 };
