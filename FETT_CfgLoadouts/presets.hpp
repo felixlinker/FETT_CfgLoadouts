@@ -1,0 +1,5 @@
+#include "CfgDefines.hpp"
+#include "presets\CfgContainers.hpp"
+#include "presets\CfgGear.hpp"
+#include "presets\CfgItems.hpp"
+#include "presets\CfgWeapons.hpp"

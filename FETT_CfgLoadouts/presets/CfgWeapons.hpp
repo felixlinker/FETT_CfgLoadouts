@@ -54,7 +54,7 @@ class MX : ACO {
 	barrelAttachment_pool[] = {"acc_pointer_IR"};
 	magazine = "30Rnd_65x39_caseless_mag";
 	magazineTracer = "30Rnd_65x39_caseless_mag_Tracer";
-	magazinesMax = 15;
+	magazinesMax = 6;
 };
 
 class MXM : MX {
@@ -70,7 +70,7 @@ class MXBlack : MX {
 
 class MXGL : MX {
 	weapon_pool[] = {"arifle_MX_GL_F"};
-	magazinesMax = 9;
+	magazinesMax = 6;
 	optional[] = {
 		{"1Rnd_HE_Grenade_shell",12},
 		{"1Rnd_SmokeRed_Grenade_shell",4},
@@ -79,7 +79,7 @@ class MXGL : MX {
 };
 
 class MXGL_JTAC : MXGL {
-	magazinesMax = 7;
+	magazinesMax = 6;
 	optional[] = {
 		{"1Rnd_HE_Grenade_shell",8},
 		{"1Rnd_SmokeRed_Grenade_shell",8},
@@ -95,14 +95,14 @@ class MXSW : MX {
 	weaponRestingAttachment_pool[] = {"bipod_02_F_blk"};
 	magazine = "100Rnd_65x39_caseless_mag";
 	magazineTracer = "100Rnd_65x39_caseless_mag_Tracer";
-	magazinesMax = 10;
+	magazinesMax = 6;
 };
 
 class MXC : Holosight {
 	weapon_pool[] = {"arifle_MXC_F"};
 	magazine = "30Rnd_65x39_caseless_mag";
 	magazineTracer = "30Rnd_65x39_caseless_mag_Tracer";
-	magazinesMax = 12;
+	magazinesMax = 6;
 };
 
 class MXCBlack : MXC {
@@ -113,7 +113,7 @@ class ABR : DMS {
 	weapon_pool[] = {"srifle_EBR_F"};
 	weaponRestingAttachment_pool[] = {"bipod_02_F_blk"};
 	magazine = "20Rnd_762x51_Mag";
-	magazinesMax = 15;
+	magazinesMax = 6;
 };
 
 class Mk1 : ABR {
@@ -127,13 +127,13 @@ class SPMG : RCO {
 	weaponRestingAttachment_pool[] = {"bipod_01_F_blk"};
 	barrelAttachment_pool[] = {"acc_pointer_IR"};
 	magazine = "130Rnd_338_Mag";
-	magazinesMax = 8;
+	magazinesMax = 6;
 };
 
 class basicPistol : WeaponClass {
 	weapon_pool[] = {"hgun_P07_F"};
 	magazine = "16Rnd_9x21_Mag";
-	magazinesMax = 3;
+	magazinesMax = 1;
 };
 
 class basicPistol_AAF : basicPistol {
@@ -180,20 +180,20 @@ class Lynx : LRPS {
 	weapon_pool[] = {"srifle_GM6_F","srifle_GM6_camo_F"};
 	magazine = "5Rnd_127x108_Mag";
 	magazineTracer = "5Rnd_127x108_APDS_Mag";
-	magazinesMax = 12;
+	magazinesMax = 8;
 	magazinesTracerEvery = 4;
 };
 
 class M320 : Lynx {
 	weapon_pool[] = {"srifle_LRR_F","srifle_LRR_camo_F"};
 	magazine = "16Rnd_9x21_Mag";
-	magazinesMax = 12;
+	magazinesMax = 8;
 };
 
 class VectorSMG : Holosight_SMG {
 	weapon_pool[] = {"SMG_01_Holo_F"};
 	magazine = "30Rnd_45ACP_Mag_SMG_01";
-	magazinesMax = 7;
+	magazinesMax = 6;
 };
 
 class PDW2000 : Holosight_SMG {
@@ -207,7 +207,7 @@ class F2000 : ACO {
 	barrelAttachment_pool[] = {"acc_pointer_IR"};
 	magazine = "30Rnd_556x45_Stanag";
 	magazineTracer = "30Rnd_556x45_Stanag_Tracer_Yellow";
-	magazinesMax = 15;
+	magazinesMax = 6;
 };
 
 class F2000C : F2000 {
@@ -224,7 +224,7 @@ class F2000GL : F2000 {
 };
 
 class F2000GL_JTAC : F2000GL {
-	magazinesMax = 7;
+	magazinesMax = 6;
 	optional[] = {
 		{"1Rnd_HE_Grenade_shell",8},
 		{"1Rnd_SmokeRed_Grenade_shell",8},
@@ -241,7 +241,7 @@ class MK200 : ACO {
 	weaponRestingAttachment_pool[] = {"bipod_03_F_blk"};
 	magazine = "200Rnd_65x39_cased_Box";
 	magazineTracer = "200Rnd_65x39_cased_Box_Tracer";
-	magazinesMax = 6;
+	magazinesMax = 3;
 	magazinesTracerEvery = 2;
 };
 
@@ -249,14 +249,14 @@ class Mk14 : KHS {
 	weapon_pool[] = {"srifle_DMR_06_olive_F"};
 	weaponRestingAttachment_pool[] = {"bipod_03_F_blk"};
 	magazine = "20Rnd_762x51_Mag";
-	magazinesMax = 12;
+	magazinesMax = 6;
 };
 
 class Cyrus : KHS {
 	weapon_pool[] = {"srifle_DMR_05_blk_F","srifle_DMR_05_tan_f"};
 	weaponRestingAttachment_pool[] = {"bipod_03_F_blk"};
 	magazine = "10Rnd_93x64_DMR_05_Mag";
-	magazinesMax = 20;
+	magazinesMax = 6;
 };
 
 class Katiba : ACO_green {
@@ -264,7 +264,7 @@ class Katiba : ACO_green {
 	barrelAttachment_pool[] = {"acc_pointer_IR"};
 	magazine = "30Rnd_65x39_caseless_green";
 	magazineTracer = "30Rnd_65x39_caseless_green_mag_Tracer";
-	magazinesMax = 15;
+	magazinesMax = 6;
 };
 
 class KatibaC : Holosight {
@@ -272,12 +272,12 @@ class KatibaC : Holosight {
 	barrelAttachment_pool[] = {"acc_pointer_IR"};
 	magazine = "30Rnd_65x39_caseless_green";
 	magazineTracer = "30Rnd_65x39_caseless_green_mag_Tracer";
-	magazinesMax = 12;
+	magazinesMax = 6;
 };
 
 class KatibaGL : Katiba {
 	weapon_pool[] = {"arifle_Katiba_GL_F"};
-	magazinesMax = 9;
+	magazinesMax = 6;
 	optional[] = {
 		{"1Rnd_HE_Grenade_shell",12},
 		{"1Rnd_SmokeRed_Grenade_shell",4},
@@ -286,7 +286,7 @@ class KatibaGL : Katiba {
 };
 
 class KatibaGL_JTAC : KatibaGL {
-	magazinesMax = 7;
+	magazinesMax = 6;
 	optional[] = {
 		{"1Rnd_HE_Grenade_shell",8},
 		{"1Rnd_SmokeRed_Grenade_shell",8},
@@ -302,8 +302,8 @@ class Zafir : ACO_green {
 	barrelAttachment_pool[] = {"acc_pointer_IR"};
 	magazine = "150Rnd_762x54_Box";
 	magazineTracer = "150Rnd_762x54_Box_Tracer";
-	magazinesMax = 5;
-	magazinesTracerEvery = 3;
+	magazinesMax = 3;
+	magazinesTracerEvery = 2;
 };
 
 class Navid : ARCO {
@@ -311,7 +311,7 @@ class Navid : ARCO {
 	barrelAttachment_pool[] = {"acc_pointer_IR"};
 	weaponRestingAttachment_pool[] = {"bipod_02_F_tan"};
 	magazine = "150Rnd_93x64_Mag";
-	magazinesMax = 5;
+	magazinesMax = 3;
 };
 
 class Cyrus_csat : Cyrus {
@@ -323,7 +323,7 @@ class Rahim : ARCO {
 	barrelAttachment_pool[] = {"acc_pointer_IR"};
 	weaponRestingAttachment_pool[] = {"bipod_02_F_hex"};
 	magazine = "10Rnd_762x54_Mag";
-	magazinesMax = 15;
+	magazinesMax = 6;
 };
 
 class RPG42 : WeaponClass {
@@ -337,7 +337,7 @@ class RPG42 : WeaponClass {
 class basicPistol_csat : WeaponClass {
 	weapon_pool[] = {"hgun_Rook40_F"};
 	magazine = "16Rnd_9x21_Mag";
-	magazinesMax = 3;
+	magazinesMax = 1;
 };
 
 class Mk1_csat : Mk1 {
@@ -348,6 +348,6 @@ class Sting : ACO_green {
 	weapon_pool[] = {"SMG_02_F"};
 	magazine = "30Rnd_9x21_Mag";
 	magazineTracer = "30Rnd_9x21_Green_Mag";
-	magazinesMax = 7;
+	magazinesMax = 6;
 	magazinesTracerEvery = 3;
 };

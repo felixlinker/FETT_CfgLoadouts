@@ -1,4 +1,25 @@
-class BasicGrenades : ItemsClass {
+#define BASIC_MEDIC \
+{ \
+	{"ACE_fieldDressing",4}, \
+	{"ACE_quikclot",4}, \
+	{"ACE_morphine",2}, \
+	"ACE_tourniquet" \
+}
+
+#define COMBAT_MEDIC \
+{ \
+	{"ACE_fieldDressing",12}, \
+	{"ACE_packingBandage",12}, \
+	{"ACE_quikclot",12}, \
+	{"ACE_elasticBandage",12}, \
+	{"ACE_morphine",8}, \
+	{"ACE_epinephrine",8}, \
+	{"ACE_plasmaIV_250",2}, \
+	"ACE_surgicalKit", \
+	"ACE_tourniquet" \
+}
+
+class BasicItems : ItemsClass {
 	grenades[] = {
 		{"HandGrenade",2},
 		{"MiniGrenade",2},
@@ -6,9 +27,10 @@ class BasicGrenades : ItemsClass {
 		{"SmokeShellGreen",2},
 		{"SmokeShell",4}
 	};
+	medicMaterial[] = BASIC_MEDIC;
 };
 
-class SmallGrenades : ItemsClass {
+class SmallItems : BasicItems {
 	grenades[] = {
 		{"HandGrenade",2},
 		{"SmokeShellRed",1},
@@ -17,7 +39,7 @@ class SmallGrenades : ItemsClass {
 	};
 };
 
-class SpecialGrenades : ItemsClass {
+class SpecialGrenades : BasicItems {
 	grenades[] = {
 		{"HandGrenade",2},
 		{"MiniGrenade",2},
@@ -30,7 +52,7 @@ class SpecialGrenades : ItemsClass {
 	};
 };
 
-class SpecialGrenadesSmall : ItemsClass {
+class SpecialGrenadesSmall : BasicItems {
 	grenades[] = {
 		{"SmokeShellBlue",1},
 		{"SmokeShellGreen",1},
@@ -40,6 +62,10 @@ class SpecialGrenadesSmall : ItemsClass {
 		"B_IR_Grenade"
 	};
 };
+
+class CombatMedicItems : SmallItems {
+	medicMaterial[] = COMBAT_MEDIC;
+}
 
 /*
 
@@ -67,42 +93,3 @@ class SpecialGrenadesSmall : ItemsClass {
 	"ACE_bodyBag"
 
 */
-
-// Basejumper
-#ifdef BASEJUMPER
-	#include "Medical\CfgMedicalBasejumper.hpp"
-#endif
-#ifdef BASEJUMPER_LAND
-	#include "Medical\CfgMedicalBasejumper.hpp"
-#endif
-
-// MilSim
-#ifdef MILSIM
-	#include "Medical\CfgMedicalMilSim.hpp"
-#endif
-
-// Running man
-#ifdef RUNNINGMAN
-	#include "Medical\CfgMedicalRunningMan.hpp"
-#endif
-
-// Rücksetzungpunkt, sollte kein Medicsystem definiert sein
-#ifndef MILSIM
-	#ifndef BASEJUMPER
-		#ifndef BASEJUMPER_LAND
-			#ifndef RUNNINGMAN
-				class BasicMedicMaterial : BasicGrenades {};
-
-				class SmallMedicMaterial : SmallGrenades {};
-
-				class CombatMedicMaterial : BasicGrenades {};
-
-				class MedicMaterial : SmallGrenades {};
-
-				class SOFMedicMaterial : SpecialGrenades {};
-
-				class PilotMedicMaterial : SpecialGrenadesSmall {};
-			#endif
-		#endif
-	#endif
-#endif
