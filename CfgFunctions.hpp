@@ -1,4 +1,4 @@
-class W_Loadouts_Config {
+class FETT_CfgLoadouts {
 	tag = "FETT";
 	class loadouts {
 		file = "Fett_CfgLoadouts";
