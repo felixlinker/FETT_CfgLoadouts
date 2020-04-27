@@ -70,7 +70,6 @@ class MXBlack : MX {
 
 class MXGL : MX {
 	weapon_pool[] = {"arifle_MX_GL_F"};
-	magazinesMax = 6;
 	optional[] = {
 		{"1Rnd_HE_Grenade_shell",12},
 		{"1Rnd_SmokeRed_Grenade_shell",4},
@@ -90,7 +89,6 @@ class MXGL_HuntIR : MXGL {
 }
 
 class MXGL_JTAC : MXGL {
-	magazinesMax = 6;
 	optional[] = {
 		{"1Rnd_HE_Grenade_shell",8},
 		{"1Rnd_SmokeRed_Grenade_shell",8},
@@ -106,14 +104,10 @@ class MXSW : MX {
 	weaponRestingAttachment_pool[] = {"bipod_02_F_blk"};
 	magazine = "100Rnd_65x39_caseless_mag";
 	magazineTracer = "100Rnd_65x39_caseless_mag_Tracer";
-	magazinesMax = 6;
 };
 
-class MXC : Holosight {
+class MXC : MX {
 	weapon_pool[] = {"arifle_MXC_F"};
-	magazine = "30Rnd_65x39_caseless_mag";
-	magazineTracer = "30Rnd_65x39_caseless_mag_Tracer";
-	magazinesMax = 6;
 };
 
 class MXCBlack : MXC {
@@ -161,8 +155,9 @@ class PCML : WeaponClass {
 class TitanAT : WeaponClass {
 	weapon_pool[] = {"launch_B_Titan_short_F"};
 	magazine = "Titan_AT";
+	magazineTracer = "Titan_AP";
 	magazinesMax = 2;
-	optional[] = {"Titan_AP"};
+	magazinesTracerEvery = 2;
 };
 
 class I_TitanAT : TitanAT {
@@ -278,17 +273,12 @@ class Katiba : ACO_green {
 	magazinesMax = 6;
 };
 
-class KatibaC : Holosight {
+class KatibaC : Katiba {
 	weapon_pool[] = {"arifle_Katiba_C_F"};
-	barrelAttachment_pool[] = {"acc_pointer_IR"};
-	magazine = "30Rnd_65x39_caseless_green";
-	magazineTracer = "30Rnd_65x39_caseless_green_mag_Tracer";
-	magazinesMax = 6;
 };
 
 class KatibaGL : Katiba {
 	weapon_pool[] = {"arifle_Katiba_GL_F"};
-	magazinesMax = 6;
 	optional[] = {
 		{"1Rnd_HE_Grenade_shell",12},
 		{"1Rnd_SmokeRed_Grenade_shell",4},
@@ -308,7 +298,6 @@ class KatibaGL_HuntIR : KatibaGL {
 };
 
 class KatibaGL_JTAC : KatibaGL {
-	magazinesMax = 6;
 	optional[] = {
 		{"1Rnd_HE_Grenade_shell",8},
 		{"1Rnd_SmokeRed_Grenade_shell",8},
@@ -340,12 +329,12 @@ class Cyrus_csat : Cyrus {
 	weapon_pool[] = {"srifle_DMR_05_hex_F","srifle_DMR_05_tan_f"};
 };
 
-class Rahim : ARCO {
-	weapon_pool[] = {"rhs_weap_fgm148"};
+class Rahim : DMS {
+	weapon_pool[] = {"srifle_DMR_01_f"};
 	barrelAttachment_pool[] = {"acc_pointer_IR"};
 	weaponRestingAttachment_pool[] = {"bipod_02_F_hex"};
 	magazine = "10Rnd_762x54_Mag";
-	magazinesMax = 6;
+	magazinesMax = 8;
 };
 
 class RPG42 : WeaponClass {

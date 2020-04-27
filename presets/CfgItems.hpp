@@ -14,7 +14,7 @@
 	{"ACE_elasticBandage",12}, \
 	{"ACE_morphine",8}, \
 	{"ACE_epinephrine",8}, \
-	{"ACE_plasmaIV_250",2}, \
+	{"ACE_plasmaIV_250",8}, \
 	"ACE_surgicalKit", \
 	"ACE_tourniquet" \
 }
