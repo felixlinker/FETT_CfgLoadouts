@@ -78,6 +78,17 @@ class MXGL : MX {
 	};
 };
 
+class MXGL_HuntIR : MXGL {
+	magazinesMax = 4;
+	optional[] = {
+		{"1Rnd_HE_Grenade_shell",6},
+		{"1Rnd_SmokeRed_Grenade_shell",2},
+		{"1Rnd_SmokeGreen_Grenade_shell",2},
+		{"ACE_HuntIR_M203",2},
+		"ACE_HuntIR_monitor"
+	};
+}
+
 class MXGL_JTAC : MXGL {
 	magazinesMax = 6;
 	optional[] = {
@@ -282,6 +293,17 @@ class KatibaGL : Katiba {
 		{"1Rnd_HE_Grenade_shell",12},
 		{"1Rnd_SmokeRed_Grenade_shell",4},
 		{"1Rnd_SmokeGreen_Grenade_shell",4}
+	};
+};
+
+class KatibaGL_HuntIR : KatibaGL {
+	magazinesMax = 4;
+	optional[] = {
+		{"1Rnd_HE_Grenade_shell",6},
+		{"1Rnd_SmokeRed_Grenade_shell",2},
+		{"1Rnd_SmokeGreen_Grenade_shell",2},
+		{"ACE_HuntIR_M203",2},
+		"ACE_HuntIR_monitor"
 	};
 };
 
