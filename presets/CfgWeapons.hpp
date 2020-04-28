@@ -18,8 +18,7 @@
 	{"1Rnd_SmokeRed_Grenade_shell",8}, \
 	{"1Rnd_SmokeGreen_Grenade_shell",8}, \
 	{"1Rnd_SmokeBlue_Grenade_shell",4}, \
-	{"1Rnd_SmokeYellow_Grenade_shell",4}, \
-	"Laserbatteries"
+	{"1Rnd_SmokeYellow_Grenade_shell",4}
 
 class ACO : WeaponClass {
 	scope_pool[] = {"optic_Aco"};
