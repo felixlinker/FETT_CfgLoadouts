@@ -141,6 +141,33 @@ class MXCBlack : MXC {
 	weapon_pool[] = {"arifle_MXC_Black_F"};
 };
 
+class SPAR16 : ACO {
+	weapon_pool[] = {"arifle_SPAR_01_blk_F"};
+	magazine = "30Rnd_556x45_Stanag";
+	magazineTracer = "30Rnd_556x45_Stanag_Tracer_Red";
+	magazinesMax = 6;
+	magazinesTracerEvery = 3;
+};
+
+class SPAR16GL : SPAR16 {
+	weapon_pool[] = {"arifle_SPAR_01_GL_blk_F"};
+	optional[] = {GL_AMMO};
+};
+
+class SPAR16S : SPAR16 {
+	weapon_pool[] = {"arifle_SPAR_02_blk_F"};
+	weaponRestingAttachment_pool[] = {"bipod_01_F_blk"};
+	magazine = "150Rnd_556x45_Drum_Mag_F";
+	magazineTracer = "150Rnd_556x45_Drum_Mag_Tracer_F";
+};
+
+class SPAR17 : DMS {
+	weapon_pool[] = {"arifle_SPAR_03_blk_F"};
+	weaponRestingAttachment_pool[] = {"bipod_01_F_blk"};
+	magazine = "20Rnd_762x51_Mag";
+	magazinesMax = 6;
+};
+
 class Mk18ABR : DMS {
 	weapon_pool[] = {"srifle_EBR_F"};
 	weaponRestingAttachment_pool[] = {"bipod_02_F_blk"};
@@ -360,4 +387,60 @@ class Sting : ACO_green {
 	magazineTracer = "30Rnd_9x21_Green_Mag";
 	magazinesMax = 6;
 	magazinesTracerEvery = 3;
+};
+
+class AK12 : ACO_green {
+	weapon_pool[] = {"arifle_AK12_F"};
+	magazine = "30Rnd_762x39_AK12_Mag_F";
+	magazineTracer = "30Rnd_762x39_Mag_Tracer_Green_F";
+	magazinesMax = 6;
+	magazinesTracerEvery = 3;
+};
+
+class AK12GL : AK12 {
+	weapon_pool[] = {"arifle_AK12_GL_F"};
+	optional[] = {GL_AMMO};
+};
+
+class Car95 : ACO_green {
+	weapon_pool[] = {"arifle_CTAR_hex_F"};
+	magazine = "30Rnd_580x42_Mag_F";
+	magazineTracer = "30Rnd_580x42_Mag_Tracer_F";
+	magazinesMax = 6;
+	magazinesTracerEvery = 3;
+};
+
+class Car95_GHex : Car95 {
+	weapon_pool[] = {"arifle_CTAR_ghex_F"};
+};
+
+class Car95GL : Car95 {
+	weapon_pool[] = {"arifle_CTAR_GL_hex_F"};
+	optional[] = {GL_AMMO};
+};
+
+class Car95GL_GHex : Car95GL {
+	weapon_pool[] = {"arifle_CTAR_GL_ghex_F"};
+};
+
+class Car95_1 : Car95 {
+	weapon_pool[] = {"arifle_CTARS_hex_F"};
+	magazine = "100Rnd_580x42_hex_Mag_F";
+	magazineTracer = "100Rnd_580x42_hex_Mag_Tracer_F";
+};
+
+class Car95_1_GHex : Car95_1 {
+	weapon_pool[] = {"arifle_CTARS_ghex_F"};
+};
+
+class CMR76 : DMS {
+	weapon_pool[] = {"srifle_DMR_07_hex_F"};
+	magazine = "20Rnd_650x39_Cased_Mag_F";
+	magazinesMax = 6;
+};
+
+class CMR76_Ghex : DMS_GHex {
+	weapon_pool[] = {"srifle_DMR_07_ghex_F"};
+	magazine = "20Rnd_650x39_Cased_Mag_F";
+	magazinesMax = 6;
 };
