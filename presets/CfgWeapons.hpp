@@ -1,6 +1,26 @@
 // "bipod_01_F_blk", // groß, auch mit _mtp, _snd
 // "bipod_02_F_blk" // klein, auch mit _hex, _tan, _blk, _oli
 
+#define GL_AMMO \
+	{"1Rnd_HE_Grenade_shell",12}, \
+	{"1Rnd_SmokeRed_Grenade_shell",4}, \
+	{"1Rnd_SmokeGreen_Grenade_shell",4}
+
+#define GL_HuntIR_AMMO \
+	{"1Rnd_HE_Grenade_shell",6}, \
+	{"1Rnd_SmokeRed_Grenade_shell",2}, \
+	{"1Rnd_SmokeGreen_Grenade_shell",2}, \
+	{"ACE_HuntIR_M203",2}, \
+	"ACE_HuntIR_monitor"
+
+#define GL_JTAC_AMMO \
+	{"1Rnd_HE_Grenade_shell",8}, \
+	{"1Rnd_SmokeRed_Grenade_shell",8}, \
+	{"1Rnd_SmokeGreen_Grenade_shell",8}, \
+	{"1Rnd_SmokeBlue_Grenade_shell",4}, \
+	{"1Rnd_SmokeYellow_Grenade_shell",4}, \
+	"Laserbatteries"
+
 class ACO : WeaponClass {
 	scope_pool[] = {"optic_Aco"};
 };
@@ -70,33 +90,16 @@ class MXBlack : MX {
 
 class MXGL : MX {
 	weapon_pool[] = {"arifle_MX_GL_F"};
-	optional[] = {
-		{"1Rnd_HE_Grenade_shell",12},
-		{"1Rnd_SmokeRed_Grenade_shell",4},
-		{"1Rnd_SmokeGreen_Grenade_shell",4}
-	};
+	optional[] = {GL_AMMO};
 };
 
 class MXGL_HuntIR : MXGL {
 	magazinesMax = 4;
-	optional[] = {
-		{"1Rnd_HE_Grenade_shell",6},
-		{"1Rnd_SmokeRed_Grenade_shell",2},
-		{"1Rnd_SmokeGreen_Grenade_shell",2},
-		{"ACE_HuntIR_M203",2},
-		"ACE_HuntIR_monitor"
-	};
+	optional[] = {GL_HuntIR_AMMO};
 }
 
 class MXGL_JTAC : MXGL {
-	optional[] = {
-		{"1Rnd_HE_Grenade_shell",8},
-		{"1Rnd_SmokeRed_Grenade_shell",8},
-		{"1Rnd_SmokeGreen_Grenade_shell",8},
-		{"1Rnd_SmokeBlue_Grenade_shell",4},
-		{"1Rnd_SmokeYellow_Grenade_shell",4},
-		"Laserbatteries"
-	};
+	optional[] = {GL_JTAC_AMMO};
 };
 
 class MXSW : MX {
@@ -222,23 +225,12 @@ class F2000C : F2000 {
 
 class F2000GL : F2000 {
 	weapon_pool[] = {"arifle_Mk20_GL_F"};
-	optional[] = {
-		{"1Rnd_HE_Grenade_shell",12},
-		{"1Rnd_SmokeRed_Grenade_shell",4},
-		{"1Rnd_SmokeGreen_Grenade_shell",4}
-	};
+	optional[] = {GL_AMMO};
 };
 
 class F2000GL_JTAC : F2000GL {
 	magazinesMax = 6;
-	optional[] = {
-		{"1Rnd_HE_Grenade_shell",8},
-		{"1Rnd_SmokeRed_Grenade_shell",8},
-		{"1Rnd_SmokeGreen_Grenade_shell",8},
-		{"1Rnd_SmokeBlue_Grenade_shell",4},
-		{"1Rnd_SmokeYellow_Grenade_shell",4},
-		"Laserbatteries"
-	};
+	optional[] = {GL_JTAC_AMMO};
 };
 
 class MK200 : ACO {
@@ -279,33 +271,16 @@ class KatibaC : Katiba {
 
 class KatibaGL : Katiba {
 	weapon_pool[] = {"arifle_Katiba_GL_F"};
-	optional[] = {
-		{"1Rnd_HE_Grenade_shell",12},
-		{"1Rnd_SmokeRed_Grenade_shell",4},
-		{"1Rnd_SmokeGreen_Grenade_shell",4}
-	};
+	optional[] = {GL_AMMO};
 };
 
 class KatibaGL_HuntIR : KatibaGL {
 	magazinesMax = 4;
-	optional[] = {
-		{"1Rnd_HE_Grenade_shell",6},
-		{"1Rnd_SmokeRed_Grenade_shell",2},
-		{"1Rnd_SmokeGreen_Grenade_shell",2},
-		{"ACE_HuntIR_M203",2},
-		"ACE_HuntIR_monitor"
-	};
+	optional[] = {GL_HuntIR_AMMO};
 };
 
 class KatibaGL_JTAC : KatibaGL {
-	optional[] = {
-		{"1Rnd_HE_Grenade_shell",8},
-		{"1Rnd_SmokeRed_Grenade_shell",8},
-		{"1Rnd_SmokeGreen_Grenade_shell",8},
-		{"1Rnd_SmokeBlue_Grenade_shell",4},
-		{"1Rnd_SmokeYellow_Grenade_shell",4},
-		"Laserbatteries"
-	};
+	optional[] = {GL_JTAC_AMMO};
 };
 
 class Zafir : ACO_green {
