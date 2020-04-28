@@ -100,21 +100,36 @@ class I_CrewContainer : I_LeadUniform {
 };
 
 #define O_B_SMALL {"B_AssaultPack_ocamo"}
+#define O_B_SMALL_GHEX {"B_AssaultPack_khk"}
 #define O_B_MED {"B_FieldPack_ocamo"}
+#define O_B_MED_GHEX {"B_FieldPack_ghex_F"}
 #define O_B_LARGE {"B_Carryall_ocamo"}
+#define O_B_LARGE_GHEX {"B_Carryall_ghex_F"}
 
 #define O_V_CARRIER {"V_Chestrig_khk"}
+#define O_V_CARRIER_G {"V_TacChestrig_grn_F"}
 #define O_V_ARMOURED {"V_TacVest_khk"}
 #define O_V_STD {"V_HarnessO_brn"}
+#define O_V_STD_Ghex {"V_HarnessO_ghex_F"}
 #define O_V_GL {"V_HarnessOGL_brn"}
+#define O_V_GL_GHex {"V_HarnessOGL_ghex_F"}
 
 class O_Uniform : ContainerClass {
 	helmet_pool[] = {"H_HelmetO_ocamo"};
 	uniform_pool[] = {"U_O_CombatUniform_ocamo"};
 };
 
+class O_Uniform_Ghex : ContainerClass {
+	helmet_pool[] = {"H_HelmetO_ghex_F"};
+	uniform_pool[] = {"U_O_T_Soldier_F"};
+};
+
 class O_SpecialUniform : O_Uniform {
 	helmet_pool[] = {"H_HelmetSpecO_ocamo"};
+};
+
+class O_SpecialUniform_Ghex : O_Uniform {
+	helmet_pool[] = {"H_HelmetSpecO_ghex_F"};
 };
 
 class O_ReconUniform : O_Uniform {
@@ -137,7 +152,18 @@ class O_LeadUniform : ContainerClass {
 	vest_pool[] = {"V_BandollierB_khk"};
 };
 
+class O_LeadUniform_GHex : ContainerClass {
+	helmet_pool[] = {"H_MilCap_ghex_F","H_Beret_blk"};
+	uniform_pool[] = {"U_O_T_Officer_F"};
+	vest_pool[] = {"V_BandollierB_ghex_F"};
+};
+
 class O_CrewUniform : O_LeadUniform {
 	helmet_pool[] = {"H_HelmetCrew_O"};
 	uniform_pool[] = {"U_O_CombatUniform_ocamo"};
+};
+
+class O_CrewUniform_Ghex : O_LeadUniform_GHex {
+	helmet_pool[] = {"H_HelmetCrew_O_ghex_F"};
+	uniform_pool[] = {"U_O_T_Soldier_F"};
 };
