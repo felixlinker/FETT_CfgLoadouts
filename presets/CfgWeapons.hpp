@@ -293,8 +293,8 @@ class MK200 : ACO {
 	magazinesTracerEvery = 2;
 };
 
-class Mk14 : Kahlia {
-	weapon_pool[] = {"srifle_DMR_06_olive_F"};
+class Mk14 : DMS {
+	weapon_pool[] = {"srifle_EBR_F"};
 	weaponRestingAttachment_pool[] = {"bipod_03_F_blk"};
 	magazine = "20Rnd_762x51_Mag";
 	magazinesMax = 6;
