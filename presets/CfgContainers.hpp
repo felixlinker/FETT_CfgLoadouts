@@ -130,9 +130,9 @@ class I_HeliCrew : I_HeliPilot {
 #define O_V_CARRIER_G {"V_TacChestrig_grn_F"}
 #define O_V_ARMOURED {"V_TacVest_khk"}
 #define O_V_STD {"V_HarnessO_brn"}
-#define O_V_STD_Ghex {"V_HarnessO_ghex_F"}
+#define O_V_STD_GHEX {"V_HarnessO_ghex_F"}
 #define O_V_GL {"V_HarnessOGL_brn"}
-#define O_V_GL_GHex {"V_HarnessOGL_ghex_F"}
+#define O_V_GL_GHEX {"V_HarnessOGL_ghex_F"}
 
 class O_Uniform : ContainerClass {
 	helmet_pool[] = {"H_HelmetO_ocamo"};
