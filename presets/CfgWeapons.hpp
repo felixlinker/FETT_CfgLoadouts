@@ -370,6 +370,10 @@ class RPG42 : WeaponClass {
 	magazinesTracerEvery = 2;
 };
 
+class RPG42_GHex : RPG42 {
+	weapon_pool[] = {"launch_RPG32_ghex_F"};
+};
+
 class basicPistol_csat : WeaponClass {
 	weapon_pool[] = {"hgun_Rook40_F"};
 	magazine = "16Rnd_9x21_Mag";
@@ -442,4 +446,12 @@ class CMR76_Ghex : DMS_GHex {
 	weapon_pool[] = {"srifle_DMR_07_ghex_F"};
 	magazine = "20Rnd_650x39_Cased_Mag_F";
 	magazinesMax = 6;
+};
+
+class MAAWSMod0_Olive : WeaponClass {
+	weapon_pool[] = {"launch_MRAWS_olive_rail_F"};
+	magazine = "MRAWS_HEAT_F";
+	magazineTracer = "MRAWS_HE_F";
+	magazinesMax = 4;
+	magazinesTracerEvery = 2;
 };
