@@ -33,8 +33,28 @@ class RCO : WeaponClass {
 	scope_pool[] = {"optic_Hamr"};
 };
 
+class RCO_Khaki : WeaponClass {
+	scope_pool[] = {"optic_Hamr_khk_F"};
+};
+
+class ERCO : WeaponClass {
+	scope_pool[] = {"optic_ERCO_blk_F"};
+};
+
+class ERCO_Khaki : WeaponClass {
+	scope_pool[] = {"optic_ERCO_khk_F"};
+};
+
 class ARCO : WeaponClass {
 	scope_pool[] = {"optic_Arco"};
+};
+
+class ARCO_Black : WeaponClass {
+	scope_pool[] = {"optic_Arco_blk_F"};
+};
+
+class ARCO_GHex : WeaponClass {
+	scope_pool[] = {"optic_Arco_ghex_F"};
 };
 
 class MRCO : WeaponClass {
@@ -45,11 +65,15 @@ class DMS : WeaponClass {
 	scope_pool[] = {"optic_DMS"};
 };
 
-class SOS : WeaponClass {
+class DMS_GHex : WeaponClass {
+	scope_pool[] = {"optic_DMS_ghex_F"};
+};
+
+class MOS : WeaponClass {
 	scope_pool[] = {"optic_SOS"};
 };
 
-class KHS : WeaponClass {
+class Kahlia : WeaponClass {
 	scope_pool[] = {"optic_KHS_blk"};
 };
 
@@ -117,14 +141,14 @@ class MXCBlack : MXC {
 	weapon_pool[] = {"arifle_MXC_Black_F"};
 };
 
-class ABR : DMS {
+class Mk18ABR : DMS {
 	weapon_pool[] = {"srifle_EBR_F"};
 	weaponRestingAttachment_pool[] = {"bipod_02_F_blk"};
 	magazine = "20Rnd_762x51_Mag";
 	magazinesMax = 6;
 };
 
-class Mk1 : ABR {
+class Mk1 : Mk18ABR {
 	weapon_pool[] = {"srifle_DMR_03_F","srifle_DMR_03_multicam_F","srifle_DMR_03_tan_F"};
 	muzzleAttachment_pool[] = {"muzzle_snds_B"};
 	magazine = "20Rnd_762x51_Mag";
@@ -243,14 +267,14 @@ class MK200 : ACO {
 	magazinesTracerEvery = 2;
 };
 
-class Mk14 : KHS {
+class Mk14 : Kahlia {
 	weapon_pool[] = {"srifle_DMR_06_olive_F"};
 	weaponRestingAttachment_pool[] = {"bipod_03_F_blk"};
 	magazine = "20Rnd_762x51_Mag";
 	magazinesMax = 6;
 };
 
-class Cyrus : KHS {
+class Cyrus : Kahlia {
 	weapon_pool[] = {"srifle_DMR_05_blk_F","srifle_DMR_05_tan_f"};
 	weaponRestingAttachment_pool[] = {"bipod_03_F_blk"};
 	magazine = "10Rnd_93x64_DMR_05_Mag";
