@@ -434,6 +434,8 @@ class Car95_1 : Car95 {
 
 class Car95_1_GHex : Car95_1 {
 	weapon_pool[] = {"arifle_CTARS_ghex_F"};
+	magazine = "100Rnd_580x42_ghex_Mag_F";
+	magazineTracer = "100Rnd_580x42_ghex_Mag_Tracer_F";
 };
 
 class CMR76 : DMS {
