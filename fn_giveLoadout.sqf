@@ -127,7 +127,7 @@ _magazinesAdditionally = [];
 		_magazine = getText (_weaponPath >> "magazine");
 
 		for "_i" from 1 to _magazinesMax do {
-			if (_i % _tracersEvery == 0) then {
+			if (_tracersEvery != 0 && {_i % _tracersEvery == 0}) then {
 				_weaponMagazinesArray pushBack _magazineTracer;
 			}
 			else {
