@@ -21,7 +21,5 @@ removeGoggles _obj;
 
 // Delayed execution for server synchronization
 [{
-	params ["_args","_pfh"];
-	_args call FETT_fnc_giveLoadout;
-	[_pfh] call CBA_fnc_removePerFramehandler;
-},0,[_loadout,_obj]] call CBA_fnc_addPerFramehandler;
+	_this call FETT_fnc_giveLoadout;
+} ,[_loadout,_obj]] call CBA_fnc_execNextFrame;
