@@ -428,6 +428,7 @@ class Car95GL : Car95 {
 };
 
 class Car95GL_HuntIR : Car95GL {
+	magazinesMax = 4;
 	optional[] = {GL_HuntIR_AMMO};
 };
 
@@ -436,6 +437,7 @@ class Car95GL_GHex : Car95GL {
 };
 
 class Car95GL_GHex_HuntIR : Car95GL_GHex {
+	magazinesMax = 4;
 	optional[] = {GL_HuntIR_AMMO};
 };
 
