@@ -153,6 +153,11 @@ class SPAR16GL : SPAR16 {
 	optional[] = {GL_AMMO};
 };
 
+class SPAR16GL_HuntIR : SPAR16GL {
+	magazinesMax = 4;
+	optional[] = {GL_HuntIR_AMMO};
+};
+
 class SPAR16S : SPAR16 {
 	weapon_pool[] = {"arifle_SPAR_02_blk_F"};
 	weaponRestingAttachment_pool[] = {"bipod_01_F_blk"};
@@ -422,8 +427,16 @@ class Car95GL : Car95 {
 	optional[] = {GL_AMMO};
 };
 
+class Car95GL_HuntIR : Car95GL {
+	optional[] = {GL_HuntIR_AMMO};
+};
+
 class Car95GL_GHex : Car95GL {
 	weapon_pool[] = {"arifle_CTAR_GL_ghex_F"};
+};
+
+class Car95GL_GHex_HuntIR : Car95GL_GHex {
+	optional[] = {GL_HuntIR_AMMO};
 };
 
 class Car95_1 : Car95 {
@@ -456,4 +469,8 @@ class MAAWSMod0_Olive : WeaponClass {
 	magazineTracer = "MRAWS_HE_F";
 	magazinesMax = 4;
 	magazinesTracerEvery = 2;
+};
+
+class MAAWSMod0_Sand : MAAWSMod0_Olive {
+	weapon_pool[] = {"launch_MRAWS_sand_rail_F"};
 };
