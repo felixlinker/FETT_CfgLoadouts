@@ -7,7 +7,7 @@ if (_class == "") then {
 private "_loadout";
 _loadout = missionConfigFile >> "CfgLoadouts" >> _class;
 if (!isClass _loadout) exitWith {
-	diag_log format ["Loadout error: class %1 not found",_class];
+	["Loadout error: class %1 not found",_class] call BIS_fnc_error;
 };
 
 removeAllWeapons _obj;
