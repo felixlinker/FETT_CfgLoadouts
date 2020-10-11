@@ -29,11 +29,6 @@ class SPAR16GL : SPAR16 {
 	optional[] = {GL_AMMO};
 };
 
-class SPAR16GL_HuntIR : SPAR16GL {
-	magazinesMax = 4;
-	optional[] = {GL_HuntIR_AMMO};
-};
-
 class SPAR16S : WeaponClass {
 	skin = "black";
 	class weapon_pool {

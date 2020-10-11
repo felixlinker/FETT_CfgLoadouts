@@ -19,11 +19,6 @@ class Car95GL : Car95 {
 	optional[] = {GL_AMMO};
 };
 
-class Car95GL_HuntIR : Car95GL {
-	magazinesMax = 4;
-	optional[] = {GL_HuntIR_AMMO};
-};
-
 class Car95_1 : Car95 {
 	class weapon_pool {
 		black[] = {"arifle_CTARS_hex_F"};

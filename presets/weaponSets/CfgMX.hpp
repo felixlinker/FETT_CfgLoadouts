@@ -47,15 +47,6 @@ class MXGL : MX {
 	optional[] = {GL_AMMO};
 };
 
-class MXGL_HuntIR : MXGL {
-	magazinesMax = 4;
-	optional[] = {GL_HuntIR_AMMO};
-};
-
-class MXGL_JTAC : MXGL {
-	optional[] = {GL_JTAC_AMMO};
-};
-
 class MXSW : WeaponClass {
 	skin = "sand";
 	class weapon_pool {

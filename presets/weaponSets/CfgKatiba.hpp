@@ -16,15 +16,6 @@ class KatibaGL : Katiba {
 	optional[] = {GL_AMMO};
 };
 
-class KatibaGL_HuntIR : KatibaGL {
-	magazinesMax = 4;
-	optional[] = {GL_HuntIR_AMMO};
-};
-
-class KatibaGL_JTAC : KatibaGL {
-	optional[] = {GL_JTAC_AMMO};
-};
-
 class Zafir : WeaponClass {
 	weapon_pool[] = {"LMG_Zafir_F"};
 	barrelAttachment_pool[] = {"acc_pointer_IR"};

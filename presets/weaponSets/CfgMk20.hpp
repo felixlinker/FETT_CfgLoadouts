@@ -16,11 +16,6 @@ class MK20GL : MK20 {
 	optional[] = {GL_AMMO};
 };
 
-class MK20GL_JTAC : MK20GL {
-	magazinesMax = 6;
-	optional[] = {GL_JTAC_AMMO};
-};
-
 class MK200 : WeaponClass {
 	weapon_pool[] = {"LMG_Mk200_F"};
 	barrelAttachment_pool[] = {"acc_pointer_IR"};
