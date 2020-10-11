@@ -76,7 +76,8 @@ _magazinesAdditionally = [];
 {
 	private ["_weaponPath","_weapons","_weaponType","_weaponMagazinesArray"];
 	_weaponPath = _loadout >> "Weapons" >> _x;
-	_weapons = getArray (_weaponPath >> "weapon_pool");
+	private _skin = getText (_weaponPath >> "skin");
+	_weapons = getArray ([_weaponPath >> "weapon_pool", _skin] call FETT_fnc_cfgWithSkin);
 	_weaponType = _x;
 	_weaponMagazinesArray = [];
 	if (count _weapons != 0) then {
@@ -101,12 +102,12 @@ _magazinesAdditionally = [];
 		};
 
 		// Add one magazine to the weapon
-		(getText (_weaponPath >> "magazine")) call _addFnc;
+		(getText ([_weaponPath >> "magazine", _skin] call FETT_fnc_cfgWithSkin)) call _addFnc;
 
 		// Add attachments
 		{
 			private "_attachments";
-			_attachments = getArray (_weaponPath >> _x);
+			_attachments = getArray ([_weaponPath >> _x, _skin] call FETT_fnc_cfgWithSkin);
 			if (count _attachments != 0) then {
 				private "_attachment";
 				_attachment = SELECTRANDOM(_attachments);
@@ -124,7 +125,7 @@ _magazinesAdditionally = [];
 		else {
 			getNumber (_weaponPath >> "magazinesTracerEvery")
 		};
-		_magazine = getText (_weaponPath >> "magazine");
+		_magazine = getText ([_weaponPath >> "magazine", _skin] call FETT_fnc_cfgWithSkin);
 
 		for "_i" from 1 to _magazinesMax do {
 			if (_tracersEvery != 0 && {_i % _tracersEvery == 0}) then {
@@ -145,7 +146,7 @@ _magazinesAdditionally = [];
 			else {
 				_magazinesAdditionally pushBack _x;
 			};
-		} forEach (getArray (_weaponPath >> "optional"));
+		} forEach (getArray ([_weaponPath >> "optional", _skin] call FETT_fnc_cfgWithSkin));
 	};
 } forEach ["secondaryWeapon","handGun","primaryWeapon"];
 

@@ -18,6 +18,7 @@ class GearClass {
 };
 
 class WeaponClass {
+	skin = "";
 	weapon_pool[] = {};
 	muzzleAttachment_pool[] = {};
 	weaponRestingAttachment_pool[] = {};

@@ -3,6 +3,7 @@ class FETT_CfgLoadouts {
 	class loadouts {
 		file = "Fett_CfgLoadouts";
 		class applyCfgLoadout {};
+		class cfgWithSkin {};
 		class giveLoadout {};
 	};
 };
