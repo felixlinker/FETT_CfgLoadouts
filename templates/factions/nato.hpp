@@ -22,7 +22,6 @@
 
 #define SMALL_BACKPACKS {"B_AssaultPack_rgr","B_AssaultPack_mcamo"}
 #define MED_BACKPACKS {"B_Kitbag_mcamo","B_Kitbag_rgr"}
-#define LARGE_BACKPACKS {"B_Carryall_mcamo"}
 
 #define HANDGUN P07
 #define SMG_WEAPON VectorSMG

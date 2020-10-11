@@ -22,7 +22,6 @@
 
 #define SMALL_BACKPACKS {}
 #define MED_BACKPACKS {}
-#define LARGE_BACKPACKS {}
 
 #define HANDGUN {}
 #define SMG_WEAPON {}

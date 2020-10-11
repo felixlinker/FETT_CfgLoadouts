@@ -22,7 +22,6 @@
 
 #define SMALL_BACKPACKS {"B_AssaultPack_dgtl"}
 #define MED_BACKPACKS {"B_FieldPack_oli"}
-#define LARGE_BACKPACKS {"B_Carryall_oli"}
 
 #define HANDGUN ACPC2
 #define SMG_WEAPON PDW2000

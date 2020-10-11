@@ -22,7 +22,6 @@
 
 #define SMALL_BACKPACKS {"B_AssaultPack_ocamo"}
 #define MED_BACKPACKS {"B_FieldPack_ocamo"}
-#define LARGE_BACKPACKS {"B_Carryall_ocamo"}
 
 #define HANDGUN Rook40
 #define SMG_WEAPON Sting
