@@ -1,0 +1,8 @@
+#define SMALL_WEAPON Car95
+#define STD_WEAPON Car95
+#define GL_WEAPON Car95GL
+#define AR_WEAPON Car95_1
+#define MMG_WEAPON Navid
+#define DMR_WEAPON CMR76
+#define LAUNCHER_WEAPON RPG42
+#define LAUNCHER_HEAVY_WEAPON TitanAT

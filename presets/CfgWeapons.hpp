@@ -1,7 +1,7 @@
 #define GL_AMMO \
-	{"1Rnd_HE_Grenade_shell",12}, \
-	{"1Rnd_SmokeRed_Grenade_shell",4}, \
-	{"1Rnd_SmokeGreen_Grenade_shell",4}
+	{"1Rnd_HE_Grenade_shell",9}, \
+	{"1Rnd_SmokeRed_Grenade_shell",3}, \
+	{"1Rnd_SmokeGreen_Grenade_shell",3}
 
 #define GL_HuntIR_AMMO \
 	{"1Rnd_HE_Grenade_shell",6}, \
