@@ -1,3 +1,5 @@
+#define PREFIX NATO_
+
 #define STD_HELMETS {"H_HelmetB","H_HelmetB_desert","H_HelmetB_grass"}
 #define RECON_HELMETS {"H_HelmetB_light","H_HelmetB_light_grass","H_HelmetB_light_sand","H_HelmetB_light_snakeskin"}
 #define SPEC_HELMETS {"H_HelmetSpecB_paint1","H_HelmetSpecB_paint2","H_HelmetSpecB_sand","H_HelmetSpecB_snakeskin"}

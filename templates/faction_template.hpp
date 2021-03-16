@@ -1,4 +1,10 @@
-class Soldier : SoldierClass {
+#ifndef PREFIX
+	#define PREFIX
+#endif
+
+#define WITH_PREFIX(clazz) PREFIX##clazz
+
+class WITH_PREFIX(Soldier) : SoldierClass {
 	class Container : Container {
 		helmet_pool[] = STD_HELMETS;
 		uniform_pool[] = STD_UNIFORMS;
@@ -15,7 +21,7 @@ class Soldier : SoldierClass {
 	class Items : BasicItems {};
 };
 
-class Officer : Soldier {
+class WITH_PREFIX(Officer) : WITH_PREFIX(Soldier) {
 	class Container : Container {
 		helmet_pool[] = LEAD_HELMETS;
 		uniform_pool[] = LEAD_UNIFORMS;
@@ -32,7 +38,7 @@ class Officer : Soldier {
 	class Items : SmallItems {};
 };
 
-class Squadleader : Officer {
+class WITH_PREFIX(Squadleader) : WITH_PREFIX(Officer) {
 	class Container : Container {
 		helmet_pool[] = SPEC_HELMETS;
 		uniform_pool[] = STD_UNIFORMS;
@@ -46,7 +52,7 @@ class Squadleader : Officer {
 	};
 };
 
-class Fireteamleader : Soldier {
+class WITH_PREFIX(Fireteamleader) : WITH_PREFIX(Soldier) {
 	class Container : Container {
 		helmet_pool[] = SPEC_HELMETS;
 	};
@@ -56,7 +62,7 @@ class Fireteamleader : Soldier {
 	};
 };
 
-class Rifleman : Soldier {
+class WITH_PREFIX(Rifleman) : WITH_PREFIX(Soldier) {
 	class Container : Container {
 		backpack_pool[] = SMALL_BACKPACKS;
 	};
@@ -71,13 +77,13 @@ class Rifleman : Soldier {
 	};
 };
 
-class RiflemanAT : Rifleman {
+class WITH_PREFIX(RiflemanAT) : WITH_PREFIX(Rifleman) {
 	class Weapons : Weapons {
 		class secondaryWeapon : LAUNCHER_WEAPON {};
 	};
 };
 
-class AutomaticRifleman : Soldier {
+class WITH_PREFIX(AutomaticRifleman) : WITH_PREFIX(Soldier) {
 	class Container : Container {
 		vest_pool[] = LIGHT_VESTS;
 	};
@@ -86,7 +92,7 @@ class AutomaticRifleman : Soldier {
 	};
 };
 
-class HeavyGunner : AutomaticRifleman {
+class WITH_PREFIX(HeavyGunner) : WITH_PREFIX(AutomaticRifleman) {
 	class Container : Container {
 		vest_pool[] = LIGHT_VESTS;
 	};
@@ -96,7 +102,7 @@ class HeavyGunner : AutomaticRifleman {
 	class Items : SmallItems {};
 };
 
-class Grenadier : Soldier {
+class WITH_PREFIX(Grenadier) : WITH_PREFIX(Soldier) {
 	class Container : Container {
 		vest_pool[] = GL_VESTS;
 	};
@@ -106,7 +112,7 @@ class Grenadier : Soldier {
 	class Items : SmallItems {};
 };
 
-class DesignatedMarksman : Soldier {
+class WITH_PREFIX(DesignatedMarksman) : WITH_PREFIX(Soldier) {
 	class Container : Container {
 		vest_pool[] = LIGHT_VESTS;
 	};
@@ -119,7 +125,7 @@ class DesignatedMarksman : Soldier {
 	};
 };
 
-class ATSpecialist : Soldier {
+class WITH_PREFIX(ATSpecialist) : WITH_PREFIX(Soldier) {
 	class Container : Container {
 		vest_pool[] = LIGHT_VESTS;
 		backpack_pool[] = SMALL_BACKPACKS;
@@ -133,7 +139,7 @@ class ATSpecialist : Soldier {
 	class Items : SmallItems {};
 };
 
-class CombatMedic : Rifleman {
+class WITH_PREFIX(CombatMedic) : WITH_PREFIX(Rifleman) {
 	class Container : Container {
 		vest_pool[] = HEAVY_VESTS;
 	};
@@ -141,7 +147,7 @@ class CombatMedic : Rifleman {
 	class Items : CombatMedicItems {};
 };
 
-class AmmoBearer : Soldier {
+class WITH_PREFIX(AmmoBearer) : WITH_PREFIX(Soldier) {
 	class Container : Container {
 		backpack_pool[] = MED_BACKPACKS;
 	};
@@ -158,7 +164,7 @@ class AmmoBearer : Soldier {
 	class Items : SmallItems {};
 };
 
-class Commander : Soldier {
+class WITH_PREFIX(Commander) : WITH_PREFIX(Soldier) {
 	class Container : Container {
 		helmet_pool[] = CREW_HELMETS;
 		uniform_pool[] = CREW_UNIFORMS;
@@ -177,11 +183,11 @@ class Commander : Soldier {
 	class Items : SmallItems {};
 };
 
-class Crew : Commander {
+class WITH_PREFIX(Crew) : WITH_PREFIX(Commander) {
 	class Gear : BasicGear {};
 };
 
-class HeliPilot : Commander {
+class WITH_PREFIX(HeliPilot) : WITH_PREFIX(Commander) {
 	class Container : Container {
 		helmet_pool[] = HELI_HELMETS;
 		uniform_pool[] = HELI_UNIFORMS;
@@ -192,7 +198,7 @@ class HeliPilot : Commander {
 	};
 };
 
-class HeliCrew : HeliPilot {
+class WITH_PREFIX(HeliCrew) : WITH_PREFIX(HeliPilot) {
 	class Container : Container {
 		helmet_pool[] = HELI_CREW_HELMETS;
 		uniform_pool[] = HELI_CREW_UNIFORMS;

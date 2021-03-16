@@ -1,3 +1,5 @@
+#define PREFIX AAF_
+
 #define STD_HELMETS {"H_HelmetIA"}
 #define RECON_HELMETS {"H_Bandanna_khk_hs","H_Watchcap_blk","H_Watchcap_camo","H_Booniehat_khk_hs","H_Booniehat_dgtl","H_Cap_oli_hs","H_Cap_blk_Raven","H_Shemag_olive_hs"}
 #define SPEC_HELMETS STD_HELMETS

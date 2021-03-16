@@ -1,3 +1,5 @@
+#define PREFIX CSAT_
+
 #define STD_HELMETS {"H_HelmetO_ocamo"}
 #define RECON_HELMETS {"H_Bandanna_gry","H_Bandanna_sand","H_Watchcap_cbr","H_Watchcap_khk","H_Booniehat_tan","H_Booniehat_khk_hs","H_Cap_brn_SPECOPS","H_MilCap_ocamo","H_ShemagOpen_tan"}
 #define SPEC_HELMETS {"H_HelmetSpecO_ocamo"}
