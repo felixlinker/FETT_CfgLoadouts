@@ -6,3 +6,4 @@
 #define DMR_WEAPON Rahim
 #define LAUNCHER_WEAPON RPG42
 #define LAUNCHER_HEAVY_WEAPON TitanAT
+#define SNIPER_WEAPON Lynx

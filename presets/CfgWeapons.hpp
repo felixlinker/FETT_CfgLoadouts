@@ -27,4 +27,5 @@
 #include "weaponSets\CfgMX.hpp"
 #include "weaponSets\CfgPistol.hpp"
 #include "weaponSets\CfgSMG.hpp"
+#include "weaponSets\CfgSniper.hpp"
 #include "weaponSets\CfgSpar.hpp"

@@ -13,6 +13,7 @@
 #define CREW_UNIFORMS {"U_O_CombatUniform_ocamo"}
 #define HELI_UNIFORMS {"U_O_PilotCoveralls"}
 #define HELI_CREW_UNIFORMS HELI_UNIFORMS
+#define GHILLIE_UNIFORMS {"U_O_GhillieSuit"}
 
 #define SMALL_VESTS {"V_BandollierB_khk"}
 #define CARRIER_VESTS {"V_Chestrig_khk"}

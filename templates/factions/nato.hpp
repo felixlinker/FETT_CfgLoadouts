@@ -13,6 +13,7 @@
 #define CREW_UNIFORMS STD_UNIFORMS
 #define HELI_UNIFORMS {"U_B_HeliPilotCoveralls"}
 #define HELI_CREW_UNIFORMS HELI_UNIFORMS
+#define GHILLIE_UNIFORMS {"U_B_GhillieSuit"}
 
 #define SMALL_VESTS {"V_BandollierB_rgr"}
 #define CARRIER_VESTS {"V_Chestrig_rgr"}

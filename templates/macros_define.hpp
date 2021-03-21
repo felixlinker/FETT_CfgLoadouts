@@ -11,6 +11,7 @@
 #define CREW_UNIFORMS {}
 #define HELI_UNIFORMS {}
 #define HELI_CREW_UNIFORMS {}
+#define GHILLIE_UNIFORMS {}
 
 #define SMALL_VESTS {}
 #define CARRIER_VESTS {}
@@ -31,6 +32,7 @@
 #define AR_WEAPON {}
 #define MMG_WEAPON {}
 #define DMR_WEAPON {}
+#define SNIPER_WEAPON {}
 #define LAUNCHER_WEAPON {}
 #define LAUNCHER_HEAVY_WEAPON {}
 

@@ -216,3 +216,30 @@ class WITH_PREFIX(HeliCrew) : WITH_PREFIX(HeliPilot) {
 	};
 	class Gear : BasicGear {};
 };
+
+class WITH_PREFIX(Sniper) : WITH_PREFIX(Soldier) {
+	class Container {
+		uniform_pool[] = GHILLIE_UNIFORMS;
+		vest_pool[] = CARRIER_VESTS;
+	};
+	class Weapons : Weapons {
+		class primaryWeapon : SNIPER_WEAPON {};
+	};
+	class Items : SpecialGrenadesSmall {};
+};
+
+class WITH_PREFIX(Spotter) : WITH_PREFIX(Sniper) {
+	class Weapons : Weapons {
+		class primaryWeapon : DMR_WEAPON {};
+	};
+	class Gear : Gear {
+		binocular_pool[] = {"Laserdesignator"};
+		special[] = {"ACE_EarPlugs","ACE_MapTools","ACE_Clacker","ACE_RangeCard"};
+	};
+	class Items : Items {
+		other[] = {
+			"ClaymoreDirectionalMine_Remote_Mag",
+			"APERSTripMine_Wire_Mag"
+		};
+	};
+};
