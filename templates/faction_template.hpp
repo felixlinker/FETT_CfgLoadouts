@@ -62,7 +62,9 @@ class WITH_PREFIX(JTAC) : WITH_PREFIX(Squadleader) {
 		binocular_pool[] = {"Laserdesignator"};
 		special[] = {"ACE_EarPlugs","ACE_MapTools"};
 	};
-	class Items : SpecialGrenadesSmall {};
+	class Items : SpecialGrenadesSmall {
+		other = {"Laserbatteries"};
+	};
 };
 
 class WITH_PREFIX(Fireteamleader) : WITH_PREFIX(Soldier) {
@@ -273,6 +275,7 @@ class WITH_PREFIX(Spotter) : WITH_PREFIX(Sniper) {
 	};
 	class Items : Items {
 		other[] = {
+			"Laserbatteries",
 			{SNIPER_WEAPON_MAG,2},
 			"ClaymoreDirectionalMine_Remote_Mag",
 			"APERSTripMine_Wire_Mag"
