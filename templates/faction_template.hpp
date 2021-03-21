@@ -278,3 +278,28 @@ class WITH_PREFIX(Spotter) : WITH_PREFIX(Sniper) {
 		};
 	};
 };
+
+class WITH_PREFIX(Logistician) : WITH_PREFIX(Soldier) {
+	class Container : Container {
+		vest_pool[] = {"V_Rangemaster_belt"};
+		backpack_pool[] = MED_BACKPACKS;
+	};
+	class Weapons : Weapons {
+		class primaryWeapon : SMG_WEAPON {
+			magazinesMax = 2;
+		};
+		class handGun : handGun {
+			magazinesMax = 0;
+		};
+	};
+	class Gear : Gear {
+		special[] = {"ACE_EarPlugs","ACE_MapTools"};
+	};
+	class Items : SpecialGrenadesSmall {};
+};
+
+class WITH_PREFIX(LogisticianTeamleader) : WITH_PREFIX(Logistician) {
+	class Gear : Gear {
+		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
+	};
+};
