@@ -147,6 +147,17 @@ class WITH_PREFIX(CombatMedic) : WITH_PREFIX(Rifleman) {
 	class Items : CombatMedicItems {};
 };
 
+class WITH_PREFIX(Medic): WITH_PREFIX(CombatMedic) {
+	class Weapons : Weapons {
+		class primaryWeapon : SMALL_WEAPON {};
+	};
+	class Container : Container {
+		vest_pool[] = SMALL_VESTS;
+		backpack_pool[] = MED_BACKPACKS;
+	};
+	class Items : MedicItems {};
+};
+
 class WITH_PREFIX(AmmoBearer) : WITH_PREFIX(Soldier) {
 	class Container : Container {
 		backpack_pool[] = MED_BACKPACKS;

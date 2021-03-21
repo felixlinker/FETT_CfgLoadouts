@@ -15,8 +15,25 @@
 	{"ACE_morphine",8}, \
 	{"ACE_epinephrine",8}, \
 	{"ACE_plasmaIV_250",8}, \
-	"ACE_surgicalKit", \
-	"ACE_tourniquet" \
+	{"ACE_tourniquet",4}, \
+	{"ACE_splint",2}, \
+	"ACE_surgicalKit" \
+}
+
+#define MEDIC \
+{ \
+	{"ACE_fieldDressing",24}, \
+	{"ACE_packingBandage",24}, \
+	{"ACE_quikclot",24}, \
+	{"ACE_elasticBandage",24}, \
+	{"ACE_morphine",16}, \
+	{"ACE_epinephrine",16}, \
+	{"ACE_plasmaIV_250",8}, \
+	{"ACE_plasmaIV_500",8}, \
+	{"ACE_plasmaIV",8}, \
+	{"ACE_tourniquet",8}, \
+	{"ACE_splint",4}, \
+	"ACE_surgicalKit" \
 }
 
 class BasicItems : ItemsClass {
@@ -45,7 +62,9 @@ class SpecialGrenades : BasicItems {
 		{"MiniGrenade",2},
 		{"SmokeShellRed",2},
 		{"SmokeShellGreen",2},
-		{"SmokeShell",4},
+		{"SmokeShellPurple",2},
+		{"SmokeShellOrange",2},
+		{"SmokeShell",2},
 		"Chemlight_green",
 		"Chemlight_red",
 		"B_IR_Grenade"
@@ -56,7 +75,8 @@ class SpecialGrenadesSmall : BasicItems {
 	grenades[] = {
 		{"SmokeShellBlue",1},
 		{"SmokeShellGreen",1},
-		{"SmokeShell",1},
+		{"SmokeShellPurple",1},
+		{"SmokeShellOrange",1},
 		"Chemlight_green",
 		"Chemlight_red",
 		"B_IR_Grenade"
@@ -65,7 +85,11 @@ class SpecialGrenadesSmall : BasicItems {
 
 class CombatMedicItems : SmallItems {
 	medicMaterial[] = COMBAT_MEDIC;
-}
+};
+
+class MedicItems : SpecialGrenadesSmall {
+	medicMaterial[] = MEDIC;
+};
 
 /*
 
