@@ -36,6 +36,18 @@
 #define LAUNCHER_WEAPON {}
 #define LAUNCHER_HEAVY_WEAPON {}
 
+#define SMALL_WEAPON_MAG ""
+#define STD_WEAPON_MAG ""
+#define GL_WEAPON_MAG ""
+#define AR_WEAPON_MAG ""
+#define MMG_WEAPON_MAG ""
+#define DMR_WEAPON_MAG ""
+#define SNIPER_WEAPON_MAG ""
+#define LAUNCHER_WEAPON_MAG_1 ""
+#define LAUNCHER_WEAPON_MAG_2 ""
+#define LAUNCHER_HEAVY_WEAPON_MAG_1 ""
+#define LAUNCHER_HEAVY_WEAPON_MAG_2 ""
+
 #define NV {}
 #define PDA {}
 #define TABLET {}

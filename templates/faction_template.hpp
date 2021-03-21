@@ -64,12 +64,15 @@ class WITH_PREFIX(Fireteamleader) : WITH_PREFIX(Soldier) {
 
 class WITH_PREFIX(Rifleman) : WITH_PREFIX(Soldier) {
 	class Container : Container {
+		vest_pool[] = LIGHT_VESTS;
 		backpack_pool[] = SMALL_BACKPACKS;
 	};
 	class Weapons : Weapons {
-		class primaryWeapon : primaryWeapon {
-			// TODO: fill with ammo
-			optional[] = {};
+		class primaryWeapon : SMALL_WEAPON {
+			optional[] = {
+				{STD_WEAPON_MAG, 4},
+				{AR_WEAPON_MAG, 3}
+			};
 		};
 	};
 	class Gear : Gear {
@@ -157,21 +160,33 @@ class WITH_PREFIX(Medic): WITH_PREFIX(CombatMedic) {
 	class Items : MedicItems {};
 };
 
-class WITH_PREFIX(AmmoBearer) : WITH_PREFIX(Soldier) {
+class WITH_PREFIX(AmmoBearerMMG) : WITH_PREFIX(Soldier) {
 	class Container : Container {
 		backpack_pool[] = MED_BACKPACKS;
 	};
 	class Weapons : Weapons {
 		class primaryWeapon : SMALL_WEAPON {
 			magazinesMax = 4;
-			// TODO: fill with ammo
-			optional[] = {};
+			optional[] = {
+				{MMG_WEAPON_MAG, 3}
+			};
 		};
 	};
 	class Gear : Gear {
 		binocular_pool[] = {"Rangefinder"};
 	};
 	class Items : SmallItems {};
+};
+
+class WITH_PREFIX(AmmoBearerAT) : WITH_PREFIX(AmmoBearerMMG) {
+	class Weapons : Weapons {
+		class primaryWeapon : primaryWeapon {
+			optional[] = {
+				{LAUNCHER_HEAVY_WEAPON_MAG_1, 2},
+				{LAUNCHER_HEAVY_WEAPON_MAG_2, 1}
+			};
+		};
+	};
 };
 
 class WITH_PREFIX(Commander) : WITH_PREFIX(Soldier) {
@@ -238,6 +253,7 @@ class WITH_PREFIX(Spotter) : WITH_PREFIX(Sniper) {
 	};
 	class Items : Items {
 		other[] = {
+			{SNIPER_WEAPON_MAG,2},
 			"ClaymoreDirectionalMine_Remote_Mag",
 			"APERSTripMine_Wire_Mag"
 		};
