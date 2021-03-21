@@ -267,6 +267,7 @@ class WITH_PREFIX(Spotter) : WITH_PREFIX(Sniper) {
 		class primaryWeapon : DMR_WEAPON {};
 	};
 	class Gear : Gear {
+		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
 		binocular_pool[] = {"Laserdesignator"};
 		special[] = {"ACE_EarPlugs","ACE_MapTools","ACE_Clacker","ACE_RangeCard"};
 	};
