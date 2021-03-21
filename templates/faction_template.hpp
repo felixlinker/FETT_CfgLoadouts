@@ -173,6 +173,12 @@ class WITH_PREFIX(Medic): WITH_PREFIX(CombatMedic) {
 	class Items : MedicItems {};
 };
 
+class WITH_PREFIX(MedicTeamleader) : WITH_PREFIX(Medic) {
+	class Gear : Gear {
+		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
+	};
+};
+
 class WITH_PREFIX(AmmoBearerMMG) : WITH_PREFIX(Soldier) {
 	class Container : Container {
 		backpack_pool[] = MED_BACKPACKS;
