@@ -52,6 +52,19 @@ class WITH_PREFIX(Squadleader) : WITH_PREFIX(Officer) {
 	};
 };
 
+class WITH_PREFIX(JTAC) : WITH_PREFIX(Squadleader) {
+	class Weapons : Weapons {
+		class primaryWeapon : primaryWeapon {
+			optional[] = {GL_JTAC_AMMO};
+		};
+	};
+	class Gear : Gear {
+		binocular_pool[] = {"Laserdesignator"};
+		special[] = {"ACE_EarPlugs","ACE_MapTools"};
+	};
+	class Items : SpecialGrenadesSmall {};
+};
+
 class WITH_PREFIX(Fireteamleader) : WITH_PREFIX(Soldier) {
 	class Container : Container {
 		helmet_pool[] = SPEC_HELMETS;

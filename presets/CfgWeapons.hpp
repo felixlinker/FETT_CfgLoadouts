@@ -11,9 +11,9 @@
 	"ACE_HuntIR_monitor"
 
 #define GL_JTAC_AMMO \
-	{"1Rnd_HE_Grenade_shell",8}, \
-	{"1Rnd_SmokeRed_Grenade_shell",8}, \
-	{"1Rnd_SmokeGreen_Grenade_shell",8}, \
+	{"1Rnd_HE_Grenade_shell",2}, \
+	{"1Rnd_SmokeRed_Grenade_shell",4}, \
+	{"1Rnd_SmokeGreen_Grenade_shell",4}, \
 	{"1Rnd_SmokeBlue_Grenade_shell",4}, \
 	{"1Rnd_SmokeYellow_Grenade_shell",4}
 
