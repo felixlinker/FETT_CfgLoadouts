@@ -121,7 +121,6 @@ class WITH_PREFIX(DesignatedMarksman) : WITH_PREFIX(Soldier) {
 	};
 	class Gear : Gear {
 		binocular_pool[] = {"Binocular"};
-		special[] = {"ACE_EarPlugs","ACE_RangeCard"};
 	};
 };
 

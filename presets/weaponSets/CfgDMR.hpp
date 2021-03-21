@@ -24,6 +24,7 @@ class Mk1 : WeaponClass {
 	};
 	magazine = "20Rnd_762x51_Mag";
 	magazinesMax = 6;
+	optional[] = {"ACE_RangeCard"};
 };
 
 // Primarily in use by CSAT
@@ -46,6 +47,7 @@ class Cyrus : WeaponClass {
 	};
 	magazine = "10Rnd_93x64_DMR_05_Mag";
 	magazinesMax = 6;
+	optional[] = {"ACE_RangeCard"};
 };
 
 class Mk14 : WeaponClass {
@@ -59,4 +61,5 @@ class Mk14 : WeaponClass {
 		olive[] = {"bipod_03_F_oli"};
 		camo[] = {"bipod_03_F_blk"};
 	};
+	optional[] = {"ACE_RangeCard"};
 };
