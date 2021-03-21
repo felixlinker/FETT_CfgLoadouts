@@ -63,7 +63,7 @@ class WITH_PREFIX(JTAC) : WITH_PREFIX(Squadleader) {
 		special[] = {"ACE_EarPlugs","ACE_MapTools"};
 	};
 	class Items : SpecialGrenadesSmall {
-		other = {"Laserbatteries"};
+		other[] = {"Laserbatteries"};
 	};
 };
 
