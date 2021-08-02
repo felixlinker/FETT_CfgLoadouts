@@ -18,4 +18,4 @@
 	{"1Rnd_SmokeYellow_Grenade_shell",4}
 
 #include "weaponSets\vanilla\CfgWeaponsVanilla.hpp"
-#include "weaponSets\rhsusf\CfgWeaponsVanilla.hpp"
+#include "weaponSets\rhsusaf\CfgWeaponsVanilla.hpp"
