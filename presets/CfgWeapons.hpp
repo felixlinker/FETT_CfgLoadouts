@@ -19,3 +19,4 @@
 
 #include "weaponSets\vanilla\CfgWeaponsVanilla.hpp"
 #include "weaponSets\rhsusaf\CfgWeaponsVanilla.hpp"
+#include "weaponSets\rhsafrf\CfgWeaponsVanilla.hpp"
