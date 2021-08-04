@@ -17,15 +17,6 @@
 	{"1Rnd_SmokeBlue_Grenade_shell",4}, \
 	{"1Rnd_SmokeYellow_Grenade_shell",4}
 
-#include "weaponSets\CfgAK.hpp"
-#include "weaponSets\CfgCar95.hpp"
-#include "weaponSets\CfgDMR.hpp"
-#include "weaponSets\CfgKatiba.hpp"
-#include "weaponSets\CfgLauncher.hpp"
-#include "weaponSets\CfgMk20.hpp"
-#include "weaponSets\CfgMMG.hpp"
-#include "weaponSets\CfgMX.hpp"
-#include "weaponSets\CfgPistol.hpp"
-#include "weaponSets\CfgSMG.hpp"
-#include "weaponSets\CfgSniper.hpp"
-#include "weaponSets\CfgSpar.hpp"
+#include "weaponSets\vanilla\CfgWeaponsVanilla.hpp"
+#include "weaponSets\rhsusaf\CfgWeaponsVanilla.hpp"
+#include "weaponSets\rhsafrf\CfgWeaponsVanilla.hpp"
