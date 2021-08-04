@@ -12,7 +12,7 @@ class WITH_PREFIX(Soldier) : SoldierClass {
 	};
 	class Gear : BasicGear {
 		nightvision_pool[] = NV;
-		gps_pool[] = PDA;
+		gps_pool[] = {"ItemGPS"};
 	};
 	class Weapons : Weapons {
 		class primaryWeapon : STD_WEAPON {};
@@ -31,6 +31,7 @@ class WITH_PREFIX(Officer) : WITH_PREFIX(Soldier) {
 		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
 		binocular_pool[] = {"Binocular"};
 		special[] = {"ACE_EarPlugs","ACE_MapTools"};
+		gps_pool[] = PDA;
 	};
 	class Weapons : Weapons {
 		class primaryWeapon : SMG_WEAPON {};
@@ -182,6 +183,7 @@ class WITH_PREFIX(Medic): WITH_PREFIX(CombatMedic) {
 class WITH_PREFIX(MedicTeamleader) : WITH_PREFIX(Medic) {
 	class Gear : Gear {
 		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
+		gps_pool[] = PDA;
 	};
 
 	onApplyLoadout = "_this setVariable ['ace_medical_medicclass', 2, true];";
@@ -225,6 +227,7 @@ class WITH_PREFIX(Commander) : WITH_PREFIX(Soldier) {
 	class Gear : Gear {
 		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
 		special[] = {"ACE_EarPlugs","ACE_MapTools"};
+		gps_pool[] = PDA;
 	};
 	class Weapons : Weapons {
 		class primaryWeapon : SMALL_WEAPON {
@@ -304,6 +307,7 @@ class WITH_PREFIX(Logistician) : WITH_PREFIX(Soldier) {
 	};
 	class Gear : Gear {
 		special[] = {"ACE_EarPlugs","ACE_MapTools", "ToolKit"};
+		gps_pool[] = PDA;
 	};
 	class Items : SpecialGrenadesSmall {};
 
@@ -334,6 +338,7 @@ class WITH_PREFIX(Artillery) : WITH_PREFIX(Soldier) {
 class WITH_PREFIX(ArtilleryTeamleader) : WITH_PREFIX(Artillery) {
 	class Gear : Gear {
 		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
+		gps_pool[] = PDA;
 	};
 };
 
