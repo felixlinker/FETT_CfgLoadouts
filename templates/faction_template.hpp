@@ -297,7 +297,7 @@ class WITH_PREFIX(Logistician) : WITH_PREFIX(Soldier) {
 		};
 	};
 	class Gear : Gear {
-		special[] = {"ACE_EarPlugs","ACE_MapTools"};
+		special[] = {"ACE_EarPlugs","ACE_MapTools", "ToolKit"};
 	};
 	class Items : SpecialGrenadesSmall {};
 };
