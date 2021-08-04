@@ -315,3 +315,45 @@ class WITH_PREFIX(LogisticianTeamleader) : WITH_PREFIX(Logistician) {
 		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
 	};
 };
+
+class WITH_PREFIX(Artillery) : WITH_PREFIX(Soldier) {
+	class Weapons : Weapons {
+		class primaryWeapon : SMG_WEAPON {
+			magazinesMax = 2;
+		};
+		class handGun : handGun {
+			magazinesMax = 0;
+		};
+	};
+	class Gear : Gear {
+		special[] = {"ACE_EarPlugs","ACE_MapTools", "ACE_artilleryTable"};
+	};
+	class Items : SmallItems {};
+};
+
+class WITH_PREFIX(ArtilleryTeamleader) : WITH_PREFIX(Artillery) {
+	class Gear : Gear {
+		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
+	};
+};
+
+class WITH_PREFIX(MortarGunner) : WITH_PREFIX(Artillery) {
+	class Container : Container {
+		backpack_pool[] = {"B_Mortar_01_weapon_F"};
+	};
+};
+
+class WITH_PREFIX(MortarLoader) : WITH_PREFIX(Artillery) {
+	class Container : Container {
+		backpack_pool[] = MED_BACKPACKS;
+	};
+	class Items : SmallItems {
+		other[] = {{"ACE_1Rnd_82mm_Mo_HE", 3}, {"ACE_1Rnd_82mm_Mo_Smoke", 2}};
+	}
+};
+
+class WITH_PREFIX(MortarTeamleader) : WITH_PREFIX(ArtilleryTeamleader) {
+	class Container : Container {
+		backpack_pool[] = {"B_Mortar_01_support_F"};
+	};
+};
