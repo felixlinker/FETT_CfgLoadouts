@@ -162,6 +162,8 @@ class WITH_PREFIX(CombatMedic) : WITH_PREFIX(Rifleman) {
 	};
 	class Gear : BasicGear {};
 	class Items : CombatMedicItems {};
+
+	onApplyLoadout = "_this setVariable ['ace_medical_medicclass', 1, true];";
 };
 
 class WITH_PREFIX(Medic): WITH_PREFIX(CombatMedic) {
@@ -173,12 +175,16 @@ class WITH_PREFIX(Medic): WITH_PREFIX(CombatMedic) {
 		backpack_pool[] = MED_BACKPACKS;
 	};
 	class Items : MedicItems {};
+
+	onApplyLoadout = "_this setVariable ['ace_medical_medicclass', 2, true];";
 };
 
 class WITH_PREFIX(MedicTeamleader) : WITH_PREFIX(Medic) {
 	class Gear : Gear {
 		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
 	};
+
+	onApplyLoadout = "_this setVariable ['ace_medical_medicclass', 2, true];";
 };
 
 class WITH_PREFIX(AmmoBearerMMG) : WITH_PREFIX(Soldier) {
@@ -300,6 +306,8 @@ class WITH_PREFIX(Logistician) : WITH_PREFIX(Soldier) {
 		special[] = {"ACE_EarPlugs","ACE_MapTools", "ToolKit"};
 	};
 	class Items : SpecialGrenadesSmall {};
+
+	onApplyLoadout = "_this setVariable ['ACE_IsEngineer', 2, true];";
 };
 
 class WITH_PREFIX(LogisticianTeamleader) : WITH_PREFIX(Logistician) {
