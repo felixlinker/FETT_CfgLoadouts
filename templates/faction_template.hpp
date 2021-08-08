@@ -12,7 +12,7 @@ class WITH_PREFIX(Soldier) : SoldierClass {
 	};
 	class Gear : BasicGear {
 		nightvision_pool[] = NV;
-		gps_pool[] = PDA;
+		gps_pool[] = {"ItemGPS"};
 	};
 	class Weapons : Weapons {
 		class primaryWeapon : STD_WEAPON {};
@@ -31,6 +31,7 @@ class WITH_PREFIX(Officer) : WITH_PREFIX(Soldier) {
 		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
 		binocular_pool[] = {"Binocular"};
 		special[] = {"ACE_EarPlugs","ACE_MapTools"};
+		gps_pool[] = PDA;
 	};
 	class Weapons : Weapons {
 		class primaryWeapon : SMG_WEAPON {};
@@ -162,6 +163,8 @@ class WITH_PREFIX(CombatMedic) : WITH_PREFIX(Rifleman) {
 	};
 	class Gear : BasicGear {};
 	class Items : CombatMedicItems {};
+
+	onApplyLoadout = "_this setVariable ['ace_medical_medicclass', 1, true];";
 };
 
 class WITH_PREFIX(Medic): WITH_PREFIX(CombatMedic) {
@@ -173,12 +176,17 @@ class WITH_PREFIX(Medic): WITH_PREFIX(CombatMedic) {
 		backpack_pool[] = MED_BACKPACKS;
 	};
 	class Items : MedicItems {};
+
+	onApplyLoadout = "_this setVariable ['ace_medical_medicclass', 2, true];";
 };
 
 class WITH_PREFIX(MedicTeamleader) : WITH_PREFIX(Medic) {
 	class Gear : Gear {
 		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
+		gps_pool[] = PDA;
 	};
+
+	onApplyLoadout = "_this setVariable ['ace_medical_medicclass', 2, true];";
 };
 
 class WITH_PREFIX(AmmoBearerMMG) : WITH_PREFIX(Soldier) {
@@ -219,6 +227,7 @@ class WITH_PREFIX(Commander) : WITH_PREFIX(Soldier) {
 	class Gear : Gear {
 		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
 		special[] = {"ACE_EarPlugs","ACE_MapTools"};
+		gps_pool[] = PDA;
 	};
 	class Weapons : Weapons {
 		class primaryWeapon : SMALL_WEAPON {
@@ -297,13 +306,59 @@ class WITH_PREFIX(Logistician) : WITH_PREFIX(Soldier) {
 		};
 	};
 	class Gear : Gear {
-		special[] = {"ACE_EarPlugs","ACE_MapTools"};
+		special[] = {"ACE_EarPlugs","ACE_MapTools", "ToolKit"};
+		gps_pool[] = PDA;
 	};
 	class Items : SpecialGrenadesSmall {};
+
+	onApplyLoadout = "_this setVariable ['ACE_IsEngineer', 2, true];";
 };
 
 class WITH_PREFIX(LogisticianTeamleader) : WITH_PREFIX(Logistician) {
 	class Gear : Gear {
 		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
+	};
+};
+
+class WITH_PREFIX(Artillery) : WITH_PREFIX(Soldier) {
+	class Weapons : Weapons {
+		class primaryWeapon : SMG_WEAPON {
+			magazinesMax = 2;
+		};
+		class handGun : handGun {
+			magazinesMax = 0;
+		};
+	};
+	class Gear : Gear {
+		special[] = {"ACE_EarPlugs","ACE_MapTools", "ACE_artilleryTable"};
+	};
+	class Items : SmallItems {};
+};
+
+class WITH_PREFIX(ArtilleryTeamleader) : WITH_PREFIX(Artillery) {
+	class Gear : Gear {
+		radios[] = {"ACRE_PRC343","ACRE_PRC148"};
+		gps_pool[] = PDA;
+	};
+};
+
+class WITH_PREFIX(MortarGunner) : WITH_PREFIX(Artillery) {
+	class Container : Container {
+		backpack_pool[] = {"B_Mortar_01_weapon_F"};
+	};
+};
+
+class WITH_PREFIX(MortarLoader) : WITH_PREFIX(Artillery) {
+	class Container : Container {
+		backpack_pool[] = MED_BACKPACKS;
+	};
+	class Items : SmallItems {
+		other[] = {{"ACE_1Rnd_82mm_Mo_HE", 3}, {"ACE_1Rnd_82mm_Mo_Smoke", 2}};
+	}
+};
+
+class WITH_PREFIX(MortarTeamleader) : WITH_PREFIX(ArtilleryTeamleader) {
+	class Container : Container {
+		backpack_pool[] = {"B_Mortar_01_support_F"};
 	};
 };

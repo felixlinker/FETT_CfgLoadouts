@@ -17,6 +17,6 @@
 	{"1Rnd_SmokeBlue_Grenade_shell",4}, \
 	{"1Rnd_SmokeYellow_Grenade_shell",4}
 
-#include "weaponSets\vanilla\CfgWeaponsVanilla.hpp"
-#include "weaponSets\rhsusaf\CfgWeaponsVanilla.hpp"
-#include "weaponSets\rhsafrf\CfgWeaponsVanilla.hpp"
+#include "weaponSets\vanilla\CfgWeapons.hpp"
+#include "weaponSets\rhsusaf\CfgWeapons.hpp"
+#include "weaponSets\rhsafrf\CfgWeapons.hpp"
