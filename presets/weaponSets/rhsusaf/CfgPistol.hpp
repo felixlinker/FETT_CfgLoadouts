@@ -10,7 +10,7 @@ class M1911A1 : WeaponClass {
 	magazinesMax = 1;
 };
 
-class M320 : WeaponClass {
+class M320GL : WeaponClass {
 	weapon_pool[] = {"rhs_weap_M320"};
 	magazine = "1Rnd_HE_Grenade_shell";
 	magazinesMax = 5;
