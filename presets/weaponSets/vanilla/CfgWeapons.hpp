@@ -13,4 +13,3 @@
 #include "CfgSniper.hpp"
 #include "CfgSpar.hpp"
 #include "CfgType155.hpp"
-#include "CfgSniper.hpp"
