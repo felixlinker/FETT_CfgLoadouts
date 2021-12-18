@@ -10,6 +10,7 @@
 #include "CfgPistol.hpp"
 #include "CfgPromet.hpp"
 #include "CfgSMG.hpp"
+#include "CfgSniper.hpp"
 #include "CfgSpar.hpp"
 #include "CfgType155.hpp"
 #include "CfgSniper.hpp"
