@@ -22,3 +22,11 @@ class Rook40 : WeaponClass {
 	magazine = "16Rnd_9x21_Mag";
 	magazinesMax = 1;
 };
+
+class SpectrumDevice : WeaponClass {
+	weapon_pool[] = {"hgun_esd_01_F"};
+	muzzleAttachment_pool[] = {"muzzle_antenna_01_f"};
+	barrelAttachment_pool[] = {"acc_esd_01_flashlight"};
+	magazine = "";
+	magazinesMax = 0;
+};
