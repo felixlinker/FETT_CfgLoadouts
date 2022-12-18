@@ -33,6 +33,8 @@ class PrometGL : Promet
 
 class PrometMR : Promet
 {
+	scope_pool[] = {"optic_sos"};
+
 	class weapon_pool {
 		green[] = {"arifle_MSBS65_MARK_F"};
 		black[] = {"arifle_MSBS65_MARK_black_F"};

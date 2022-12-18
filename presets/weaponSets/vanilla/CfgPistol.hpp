@@ -23,6 +23,17 @@ class Rook40 : WeaponClass {
 	magazinesMax = 1;
 };
 
+// Standard LDF pistol
+class fourfive : WeaponClass {
+	skin = "sand";
+	class weapon_pool {
+		sand[] = {"hgun_Pistol_heavy_01_F"};
+		green[] = {"hgun_Pistol_heavy_01_green_F"};
+	};
+	magazine = "11Rnd_45ACP_Mag";
+	magazinesMax = 1;
+};
+
 class SpectrumDevice : WeaponClass {
 	weapon_pool[] = {"hgun_esd_01_F"};
 	muzzleAttachment_pool[] = {"muzzle_antenna_01_f"};

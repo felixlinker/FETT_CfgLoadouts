@@ -17,7 +17,13 @@ class MK20GL : MK20 {
 };
 
 class MK200 : WeaponClass {
-	weapon_pool[] = {"LMG_Mk200_F"};
+	skin = "sand";
+	
+	class weapon_pool {
+		sand[] = {"LMG_Mk200_F"};
+		black[] = {"LMG_Mk200_black_F"};
+	};
+
 	barrelAttachment_pool[] = {"acc_pointer_IR"};
 	weaponRestingAttachment_pool[] = {"bipod_03_F_blk"};
 	magazine = "200Rnd_65x39_cased_Box";
